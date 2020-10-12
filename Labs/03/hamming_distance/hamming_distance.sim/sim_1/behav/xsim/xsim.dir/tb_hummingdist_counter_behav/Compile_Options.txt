@@ -1,0 +1,1 @@
+-wto "1880729682564978a334d09e41c3a479" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "tb_hummingdist_counter_behav" "xil_defaultlib.tb_hummingdist_counter" -log "elaborate.log" 

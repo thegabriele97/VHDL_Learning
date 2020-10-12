@@ -1,0 +1,11 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../hamming_distance.srcs/sources_1/new/adder_1bit.vhd" \
+"../../../../hamming_distance.srcs/sources_1/new/adder_2bit.vhd" \
+"../../../../hamming_distance.srcs/sources_1/new/adder_4bit.vhd" \
+"../../../../hamming_distance.srcs/sources_1/new/hamming_difference_mask.vhd" \
+"../../../../hamming_distance.srcs/sources_1/new/hammingdist_counter.vhd" \
+"../../../../hamming_distance.srcs/sim_1/new/tb_hummingdist_counter.vhd" \
+
+# Do not sort compile order
+nosort

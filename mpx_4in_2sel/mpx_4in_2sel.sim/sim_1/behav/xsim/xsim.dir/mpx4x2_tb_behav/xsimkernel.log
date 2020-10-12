@@ -1,0 +1,7 @@
+Running: xsim.dir/mpx4x2_tb_behav/xsimk.exe -simmode gui -wdb mpx4x2_tb_behav.wdb -simrunnum 0 -socket 54775
+Design successfully loaded
+Design Loading Memory Usage: 5268 KB (Peak: 5268 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 5664 KB (Peak: 5664 KB)
+Simulation CPU Usage: 0 ms

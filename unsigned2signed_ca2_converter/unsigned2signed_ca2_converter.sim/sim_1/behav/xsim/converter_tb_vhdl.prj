@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../unsigned2signed_ca2_converter.srcs/sources_1/new/converter.vhd" \
+"../../../../unsigned2signed_ca2_converter.srcs/sim_1/new/converter_tb.vhd" \
+
+# Do not sort compile order
+nosort

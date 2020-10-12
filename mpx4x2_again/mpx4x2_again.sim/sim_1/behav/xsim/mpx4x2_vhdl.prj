@@ -1,0 +1,6 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../mpx4x2_again.srcs/sources_1/new/mpx4x2.vhd" \
+
+# Do not sort compile order
+nosort
