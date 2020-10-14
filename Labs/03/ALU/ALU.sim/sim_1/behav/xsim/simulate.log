@@ -1,0 +1,202 @@
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+Error: bad increment, should be =11111111
+Time: 1 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 11 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 21 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 31 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 41 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 51 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 61 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 71 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 81 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 91 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 101 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 111 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 121 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 131 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 141 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 151 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 161 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 171 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 181 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 191 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 201 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 211 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 221 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 231 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 241 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 251 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 261 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 271 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 281 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 291 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 301 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 311 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 321 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 331 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 341 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 351 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 361 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 371 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 381 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 391 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 401 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 411 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 421 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 431 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 441 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 451 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 461 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 471 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 481 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 491 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 501 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 511 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 521 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 531 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 541 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 551 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 561 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 571 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 581 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 591 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 601 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 611 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 621 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 631 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 641 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 651 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 661 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 671 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 681 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 691 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 701 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 711 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 721 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 731 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 741 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 751 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 761 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 771 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 781 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 791 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 801 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 811 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 821 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 831 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 841 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 851 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 861 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 871 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 881 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 891 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 901 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 911 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 921 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 931 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 941 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 951 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 961 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 971 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =11111111
+Time: 981 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
+Error: bad increment, should be =10000111
+Time: 991 ns  Iteration: 0  Process: /tb/line__27  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/ALU/ALU.srcs/sim_1/new/tb.vhd
