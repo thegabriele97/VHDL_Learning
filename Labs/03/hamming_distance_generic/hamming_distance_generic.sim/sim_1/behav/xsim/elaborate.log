@@ -3,17 +3,6 @@ Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
 Running: D:/Softwares_OS/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 70e805cf62db4b39b7474daa2a48c0ef --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_behav xil_defaultlib.tb -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.adder_nbits [\adder_nbits(nbits=1)\]
-Compiling architecture behavioral of entity xil_defaultlib.adder_nbits [\adder_nbits(nbits=2)\]
-Compiling architecture behavioral of entity xil_defaultlib.adder_nbits [\adder_nbits(nbits=3)\]
-Compiling architecture structural of entity xil_defaultlib.hamming_dist [hamming_dist_default]
-Compiling architecture behavioral of entity xil_defaultlib.tb
-Built simulation snapshot tb_behav
+ERROR: [VRFC 10-923] index value <4> is out of range [3:0] of array <dist_s> [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/hamming_distance_generic/hamming_distance_generic.srcs/sources_1/new/hamming_dist.vhd:81]
+ERROR: [VRFC 10-3457] index 4 is out of array constraint 3 downto 0 for target 'dist_s' [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/hamming_distance_generic/hamming_distance_generic.srcs/sources_1/new/hamming_dist.vhd:81]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit tb in library work failed.

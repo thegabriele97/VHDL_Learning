@@ -6,38 +6,60 @@ end reg8bit_tb;
 
 architecture reg8bit_tb_arch of reg8bit_tb is
 
-    component reg8bit is
+    component reg is
+        generic (
+            nbits: integer := 8
+        );
         port(
-            d_in: in std_logic_vector(7 downto 0);
-            d_out: out std_logic_vector(7 downto 0);
-            oe: in std_logic; -- Output Enable. 0 for High Impedance
-            load: in std_logic -- Load data in memory
+            d: in std_logic_vector((nbits-1) downto 0);
+            clk, cs, rst: in std_logic;
+            q: out std_logic_vector((nbits-1) downto 0)
         );
     end component;
 
-    signal d_in_s, d_out_s: std_logic_vector(7 downto 0);
-    signal oe_s, load_s: std_logic;
+    signal d_s, q_s: std_logic_vector(7 downto 0);
+    signal c_s, clk_s, rst_s: std_logic := '0';
 
 begin
 
-    reg8bit_test: reg8bit port map(d_in_s, d_out_s, oe_s, load_s);
+    reg8bit_test: reg port map(d_s, clk_s, c_s, rst_s, q_s);
 
     process
     begin
     
-        d_in_s <= "00011010";
-        load_s <= '1';
+        wait for 10 ns;
+        clk_s <= not(clk_s);
+    
+    end process;
+
+    process
+    begin
+    
+        rst_s <= '1';
+        wait for 2 ns;
+        
+        rst_s <= '0';
+        wait for 2 ns;
+    
+        d_s <= "00011010";
+        c_s <= '0';
+        rst_s <= '0';
         wait for 10ns;
         
-        load_s <= '0';
-        d_in_s <= "XXXXXXXX";
+        c_s <= '1';
         wait for 10ns;
         
-        oe_s <= '1';
+        d_s <= "00011110";
         wait for 10ns;
         
-        oe_s <= '0';
-        wait for 30ns;
+        c_s <= '0';
+        wait for 10ns;
+    
+        rst_s <= '1';
+        wait for 10 ns;
+        
+        c_s <= '1';
+        wait for 10 ns;
     
     end process;
 

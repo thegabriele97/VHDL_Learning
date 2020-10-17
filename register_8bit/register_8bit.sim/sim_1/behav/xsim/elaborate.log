@@ -10,6 +10,6 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
-Compiling architecture reg8bit_arch of entity xil_defaultlib.reg8bit [reg8bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.reg [reg_default]
 Compiling architecture reg8bit_tb_arch of entity xil_defaultlib.reg8bit_tb
 Built simulation snapshot reg8bit_tb_behav

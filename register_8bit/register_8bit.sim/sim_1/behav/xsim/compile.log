@@ -1,4 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/gabri/OneDrive/Desktop/Vivado Projects/register_8bit/register_8bit.srcs/sources_1/new/reg8bit.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'reg8bit'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/gabri/OneDrive/Desktop/Vivado Projects/register_8bit/register_8bit.srcs/sim_1/new/reg8bit_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'reg8bit_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/gabri/OneDrive/Desktop/Vivado Projects/register_8bit/register_8bit.srcs/sources_1/new/reg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'reg'

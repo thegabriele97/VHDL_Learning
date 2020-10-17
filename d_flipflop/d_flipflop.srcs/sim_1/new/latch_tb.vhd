@@ -6,56 +6,48 @@ end latch_tb;
 
 architecture latch_tb_arch of latch_tb is
 
-    component latch is
+    component ff_masterslave is
         port(
-            q, q_c: inout std_logic
+            d, rst, clk: in std_logic;
+            q: out std_logic
         );
     end component;
 
-    signal q_s, q_c_s: std_logic;
+    signal d_s, rst_s, clk_s, q_s: std_logic := '1';
     
 begin
 
-    latch_test: latch port map(q_s, q_c_s);
+    test: ff_masterslave port map(d_s, rst_s, clk_s, q_s);
+    
+    process
+    begin 
+    
+        clk_s <= not(clk_s);
+        wait for 10 ns;
+    
+    end process;
     
     process
     begin
         
-        q_s <= '1';
-        q_c_s <= '0';
-        wait for 10ns;
+        rst_s <= '0';
+        wait for 7 ns;
         
-        q_s <= '0';
-        q_c_s <= '1';
-        wait for 10ns;
+        d_s <= '1';
+        wait for 10 ns;
         
-        q_s <= '0';
-        q_c_s <= '1';
-        wait for 10ns;
+        d_s <= '0';
+        wait for 14 ns;
         
-        q_s <= '0';
-        q_c_s <= '1';
-        wait for 10ns;
+        d_s <= '1';
+        wait for 10 ns;
         
-        q_s <= '1';
-        q_c_s <= '0';
-        wait for 10ns;
+        rst_s <= '1';
+        wait for 8 ns;
         
-        q_s <= '0';
-        q_c_s <= '1';
-        wait for 10ns;
-        
-        q_s <= '0';
-        q_c_s <= '1';
-        wait for 10ns;
-        
-        q_s <= '0';
-        q_c_s <= '1';
-        wait for 10ns;
-        
-        q_s <= '0';
-        q_c_s <= '1';
-        wait for 10ns;
+        rst_s <= '0';
+        d_s <= '1';
+        wait for 3 ns;
         
     end process;
 

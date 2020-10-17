@@ -1,0 +1,12 @@
+
+{ 
+    crc :  1888059493719006526  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto 5ce9cdcf0be44652af5745c2a1854c2c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot coll_detect_behav xil_defaultlib.coll_detect" , 
+    buildDate : "May 27 2020" , 
+    buildTime : "20:09:33" , 
+    linkCmd : "D:\\Softwares_OS\\Xilinx\\Vivado\\2020.1\\data\\..\\tps\\mingw\\6.2.0\\win64.o\\nt\\bin\\gcc.exe -Wa,-W  -O -Wl,--stack,104857600 -o \"xsim.dir/coll_detect_behav/xsimk.exe\"   \"xsim.dir/coll_detect_behav/obj/xsim_0.win64.obj\" \"xsim.dir/coll_detect_behav/obj/xsim_1.win64.obj\" -L\"D:\\Softwares_OS\\Xilinx\\Vivado\\2020.1\\lib\\win64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

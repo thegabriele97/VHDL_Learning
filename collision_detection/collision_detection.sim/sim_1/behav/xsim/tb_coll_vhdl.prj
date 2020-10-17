@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../collision_detection.srcs/sources_1/new/coll_detect.vhd" \
+"../../../../collision_detection.srcs/sim_1/new/tb_coll.vhd" \
+
+# Do not sort compile order
+nosort

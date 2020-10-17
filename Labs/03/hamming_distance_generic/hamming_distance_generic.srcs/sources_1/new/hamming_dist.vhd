@@ -1,5 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity hamming_dist is
     port(
@@ -58,3 +59,23 @@ begin
     );
 
 end Structural;
+
+architecture Behav of hamming_dist is
+begin
+
+    process(a, b)
+    
+        variable diff: std_logic_vector(7 downto 0);
+        variable cnt: unsigned(3 downto 0);
+    
+    begin
+    
+        diff := a xor b;
+        cnt := ("000" & diff(0)) + ('0' & diff(1)) + ('0' & diff(2)) + ('0' & diff(3)) +
+                 ('0' & diff(4)) + ('0' & diff(5)) + ('0' & diff(6)) + ('0' & diff(7));
+                 
+        dist <= std_logic_vector(cnt);
+    
+    end process;
+
+end Behav;
