@@ -60,6 +60,9 @@ begin
         
         c_s <= '1';
         wait for 10 ns;
+        
+        d_s <= "11111111";
+        wait for 10 ns;
     
     end process;
 

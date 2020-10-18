@@ -29,7 +29,7 @@ begin
     
     end process;
     
-    process(cs)
+    process(cs, internal_mem)
     begin
     
         if (cs = '1') then
