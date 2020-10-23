@@ -1,0 +1,223 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Oct 21 11:43:59 2020
+# Process ID: 10628
+# Current directory: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.runs/synth_1
+# Command line: vivado.exe -log reconfigurable_alu.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source reconfigurable_alu.tcl
+# Log file: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.runs/synth_1/reconfigurable_alu.vds
+# Journal file: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source reconfigurable_alu.tcl -notrace
+Command: synth_design -top reconfigurable_alu -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 9168
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1016.145 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'reconfigurable_alu' [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/ReconfigurableALU.vhd:14]
+WARNING: [Synth 8-614] signal 'nibble' is read in the process but is not in the sensitivity list [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/ReconfigurableALU.vhd:52]
+	Parameter nbits bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'FullALU' declared at 'C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/FullALU.vhd:5' bound to instance 'alu' of component 'FullALU' [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/ReconfigurableALU.vhd:78]
+INFO: [Synth 8-638] synthesizing module 'FullALU' [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/FullALU.vhd:18]
+	Parameter nbits bound to: 4 - type: integer 
+	Parameter nbit bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'ALU_wcarry' declared at 'C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/ALU_wcarry.vhd:5' bound to instance 'internal_alu' of component 'ALU_wcarry' [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/FullALU.vhd:36]
+INFO: [Synth 8-638] synthesizing module 'ALU_wcarry' [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/ALU_wcarry.vhd:17]
+	Parameter nbit bound to: 4 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/ALU_wcarry.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'ALU_wcarry' (1#1) [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/ALU_wcarry.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'FullALU' (2#1) [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/FullALU.vhd:18]
+	Parameter nbits bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'FullALU' declared at 'C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/FullALU.vhd:5' bound to instance 'alu' of component 'FullALU' [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/ReconfigurableALU.vhd:78]
+	Parameter nbits bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'FullALU' declared at 'C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/FullALU.vhd:5' bound to instance 'alu' of component 'FullALU' [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/ReconfigurableALU.vhd:78]
+	Parameter nbits bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'FullALU' declared at 'C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/FullALU.vhd:5' bound to instance 'alu' of component 'FullALU' [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/ReconfigurableALU.vhd:78]
+INFO: [Synth 8-3491] module 'ripple_carry' declared at 'C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/ripple_carry.vhd:4' bound to instance 'carry_ctrl' of component 'ripple_carry' [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/ReconfigurableALU.vhd:90]
+INFO: [Synth 8-638] synthesizing module 'ripple_carry' [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/ripple_carry.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'ripple_carry' (3#1) [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/ripple_carry.vhd:11]
+INFO: [Synth 8-3491] module 'ripple_carry' declared at 'C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/ripple_carry.vhd:4' bound to instance 'carry_ctrl' of component 'ripple_carry' [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/ReconfigurableALU.vhd:90]
+INFO: [Synth 8-3491] module 'ripple_carry' declared at 'C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/ripple_carry.vhd:4' bound to instance 'carry_ctrl' of component 'ripple_carry' [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/ReconfigurableALU.vhd:90]
+INFO: [Synth 8-3491] module 'ripple_carry' declared at 'C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/ripple_carry.vhd:4' bound to instance 'carry_ctrl' of component 'ripple_carry' [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/ReconfigurableALU.vhd:90]
+INFO: [Synth 8-3491] module 'nibble_shift' declared at 'C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/nibble_shift.vhd:4' bound to instance 'nibble_shift_out' of component 'nibble_shift' [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/ReconfigurableALU.vhd:99]
+INFO: [Synth 8-638] synthesizing module 'nibble_shift' [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/nibble_shift.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'nibble_shift' (4#1) [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/nibble_shift.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'reconfigurable_alu' (5#1) [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/ReconfigurableALU.vhd:14]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1016.145 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1016.145 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1016.145 ; gain = 0.000
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'int_data_reg' [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/nibble_shift.vhd:26]
+WARNING: [Synth 8-327] inferring latch for variable 'already_fixed_reg' [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/ReconfigurableALU.vhd:63]
+WARNING: [Synth 8-327] inferring latch for variable 'src_reg' [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/ReconfigurableALU.vhd:64]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1016.145 ; gain = 0.000
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 9     
+	   3 Input    5 Bit       Adders := 8     
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 8     
+	   2 Input    6 Bit        Muxes := 1     
+	   5 Input    5 Bit        Muxes := 8     
+	   2 Input    5 Bit        Muxes := 8     
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1016.145 ; gain = 0.000
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1016.145 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1016.145 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1016.145 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1016.145 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1016.145 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1016.145 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1016.145 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1016.145 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT2 |     5|
+|2     |LUT3 |    14|
+|3     |LUT4 |    19|
+|4     |LUT5 |    26|
+|5     |LUT6 |    60|
+|6     |LD   |    21|
+|7     |IBUF |    39|
+|8     |OBUF |    16|
++------+-----+------+
+
+Report Instance Areas: 
++------+-------------------+-------------+------+
+|      |Instance           |Module       |Cells |
++------+-------------------+-------------+------+
+|1     |top                |             |   200|
+|2     |  nibble_shift_out |nibble_shift |   131|
++------+-------------------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1016.145 ; gain = 0.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1016.145 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1016.145 ; gain = 0.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1016.145 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 21 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1016.145 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 21 instances were transformed.
+  LD => LDCE: 21 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+33 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 1016.145 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.runs/synth_1/reconfigurable_alu.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file reconfigurable_alu_utilization_synth.rpt -pb reconfigurable_alu_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 21 11:44:35 2020...

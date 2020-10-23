@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Oct 21 11:43:59 2020
+# Process ID: 10628
+# Current directory: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.runs/synth_1
+# Command line: vivado.exe -log reconfigurable_alu.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source reconfigurable_alu.tcl
+# Log file: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.runs/synth_1/reconfigurable_alu.vds
+# Journal file: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source reconfigurable_alu.tcl -notrace

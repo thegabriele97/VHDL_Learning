@@ -31,17 +31,23 @@ begin
         nibble <= "1010";
         ctrl <= "001";
         wait for 10 ns;
+        assert result = x"00ad";
         
         ctrl <= "100";
         wait for 10 ns;
+        assert result = x"0056";
         
         nibble <= "0101";
         wait for 10 ns;
+        assert result = x"0067";
         
         nibble <= "1100";
         wait for 10 ns;
         
         nibble <= "1111";
+        wait for 10 ns;
+        
+        nibble <= "1001";
         wait for 10 ns;
         
         a <= x"9999";

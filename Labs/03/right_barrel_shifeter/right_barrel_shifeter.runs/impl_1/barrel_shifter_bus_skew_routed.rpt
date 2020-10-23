@@ -1,0 +1,15 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Sun Oct 18 18:29:05 2020
+| Host         : DESKTOP-F1D4ON6 running 64-bit major release  (build 9200)
+| Command      : report_bus_skew -warn_on_violation -file barrel_shifter_bus_skew_routed.rpt -pb barrel_shifter_bus_skew_routed.pb -rpx barrel_shifter_bus_skew_routed.rpx
+| Design       : barrel_shifter
+| Device       : 7k70t-fbv676
+| Speed File   : -1  PRODUCTION 1.12 2017-02-17
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+

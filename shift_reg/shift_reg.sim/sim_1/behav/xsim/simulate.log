@@ -1,0 +1,12 @@
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+Error: Assertion violation
+Time: 117 ns  Iteration: 0  Process: /tb_reg/line__35  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/shift_reg/shift_reg.srcs/sim_1/new/tb_reg.vhd
+Error: Assertion violation
+Time: 117 ns  Iteration: 0  Process: /tb_reg/line__35  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/shift_reg/shift_reg.srcs/sim_1/new/tb_reg.vhd
+Error: Assertion violation
+Time: 117 ns  Iteration: 0  Process: /tb_reg/line__35  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/shift_reg/shift_reg.srcs/sim_1/new/tb_reg.vhd
+Error: Assertion violation
+Time: 117 ns  Iteration: 0  Process: /tb_reg/line__35  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/shift_reg/shift_reg.srcs/sim_1/new/tb_reg.vhd
+Error: File data.mem is already at the end of file, nothing to read
+Time: 157 ns  Iteration: 0  Process: /tb_reg/line__35  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/shift_reg/shift_reg.srcs/sim_1/new/tb_reg.vhd

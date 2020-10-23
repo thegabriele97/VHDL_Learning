@@ -1,2 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sources_1/new/ReconfigurableALU.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'reconfigurable_alu'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_config_alu'

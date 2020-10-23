@@ -1,0 +1,74 @@
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+Error: Assertion violation
+Time: 90 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 100 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 110 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 170 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 180 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 190 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 250 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 260 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 270 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 330 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 340 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 350 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 410 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 420 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 430 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 490 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 500 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 510 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 570 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 580 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 590 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 650 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 660 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 670 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 730 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 740 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 750 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 810 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 820 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 830 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 890 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 900 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 910 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 970 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 980 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd
+Error: Assertion violation
+Time: 990 ns  Iteration: 0  Process: /tb_config_alu/line__26  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/04/reconfigurable_alu/reconfigurable_alu.srcs/sim_1/new/tb_config_alu.vhd

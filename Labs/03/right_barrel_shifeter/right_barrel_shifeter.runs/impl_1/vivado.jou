@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Oct 18 18:28:10 2020
+# Process ID: 13016
+# Current directory: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/right_barrel_shifeter/right_barrel_shifeter.runs/impl_1
+# Command line: vivado.exe -log barrel_shifter.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source barrel_shifter.tcl -notrace
+# Log file: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/right_barrel_shifeter/right_barrel_shifeter.runs/impl_1/barrel_shifter.vdi
+# Journal file: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/03/right_barrel_shifeter/right_barrel_shifeter.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source barrel_shifter.tcl -notrace

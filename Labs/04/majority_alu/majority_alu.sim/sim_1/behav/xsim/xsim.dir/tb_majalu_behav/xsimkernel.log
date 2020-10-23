@@ -2,3 +2,6 @@ Running: xsim.dir/tb_majalu_behav/xsimk.exe -simmode gui -wdb tb_majalu_behav.wd
 Design successfully loaded
 Design Loading Memory Usage: 5320 KB (Peak: 5320 KB)
 Design Loading CPU Usage: 61 ms
+Simulation completed
+Simulation Memory Usage: 5900 KB (Peak: 5900 KB)
+Simulation CPU Usage: 61 ms
