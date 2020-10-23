@@ -1,0 +1,6 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../better_multiplier.srcs/sources_1/new/multiplier.vhd" \
+
+# Do not sort compile order
+nosort
