@@ -1,0 +1,1 @@
+-wto "5072884ac68142abbbe9b2b1f27fc0b0" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "therm2bin_behav" "xil_defaultlib.therm2bin" -log "elaborate.log" 

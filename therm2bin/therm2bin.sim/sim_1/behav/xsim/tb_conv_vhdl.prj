@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../therm2bin.srcs/sources_1/new/therm2bin.vhd" \
+"../../../../therm2bin.srcs/sim_1/new/tb_conv.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/gabri/OneDrive/Desktop/Vivado Projects/fsm_preamble/fsm_preamble.srcs/sources_1/new/fsm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fsm'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/gabri/OneDrive/Desktop/Vivado Projects/fsm_preamble/fsm_preamble.srcs/sim_1/new/tb_fsm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_fsm'
