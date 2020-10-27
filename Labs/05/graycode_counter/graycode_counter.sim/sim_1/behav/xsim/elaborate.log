@@ -1,0 +1,17 @@
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Softwares_OS/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 874e576c95864523b5e32d7998f46881 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_cnt4_behav xil_defaultlib.tb_cnt4 -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/05/graycode_counter/graycode_counter.srcs/sim_1/new/tb_cnt4.vhd:54]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.counter [counter_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_cnt4
+Built simulation snapshot tb_cnt4_behav

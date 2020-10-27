@@ -1,0 +1,18 @@
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+Error: Assertion violation
+Time: 8 ns  Iteration: 0  Process: /tb_file/line__34  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/05/fsm1/fsm1.srcs/sim_1/new/tb_file.vhd
+Error: Assertion violation
+Time: 9 ns  Iteration: 0  Process: /tb_file/line__34  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/05/fsm1/fsm1.srcs/sim_1/new/tb_file.vhd
+Error: Assertion violation
+Time: 15 ns  Iteration: 0  Process: /tb_file/line__34  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/05/fsm1/fsm1.srcs/sim_1/new/tb_file.vhd
+Error: Assertion violation
+Time: 16 ns  Iteration: 0  Process: /tb_file/line__34  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/05/fsm1/fsm1.srcs/sim_1/new/tb_file.vhd
+Error: Assertion violation
+Time: 19 ns  Iteration: 0  Process: /tb_file/line__34  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/05/fsm1/fsm1.srcs/sim_1/new/tb_file.vhd
+Error: Assertion violation
+Time: 20 ns  Iteration: 0  Process: /tb_file/line__34  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/05/fsm1/fsm1.srcs/sim_1/new/tb_file.vhd
+Error: Assertion violation
+Time: 22 ns  Iteration: 0  Process: /tb_file/line__34  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/05/fsm1/fsm1.srcs/sim_1/new/tb_file.vhd
+Error: Assertion violation
+Time: 23 ns  Iteration: 0  Process: /tb_file/line__34  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/05/fsm1/fsm1.srcs/sim_1/new/tb_file.vhd

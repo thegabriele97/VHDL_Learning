@@ -1,0 +1,4 @@
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+Error: after 15 clock cycles, d should be 1000
+Time: 18 ns  Iteration: 0  Process: /tb_cnt4/line__34  File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/05/graycode_counter/graycode_counter.srcs/sim_1/new/tb_cnt4.vhd

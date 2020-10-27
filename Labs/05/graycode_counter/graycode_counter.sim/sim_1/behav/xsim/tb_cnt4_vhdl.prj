@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../graycode_counter.srcs/sources_1/new/counter.vhd" \
+"../../../../graycode_counter.srcs/sim_1/new/tb_cnt4.vhd" \
+
+# Do not sort compile order
+nosort
