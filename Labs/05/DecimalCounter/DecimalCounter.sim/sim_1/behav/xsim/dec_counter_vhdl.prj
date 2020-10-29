@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../DecimalCounter.srcs/sources_1/new/dec_count_1digit.vhd" \
+"../../../../DecimalCounter.srcs/sources_1/new/dec_counter.vhd" \
+
+# Do not sort compile order
+nosort
