@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/06/lfsr_8bit/lfsr_8bit.srcs/sources_1/new/lfsr_8bit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'lfsr_8bit'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Labs/06/lfsr_8bit/lfsr_8bit.srcs/sim_1/new/tb_lfsr.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_lfsr'

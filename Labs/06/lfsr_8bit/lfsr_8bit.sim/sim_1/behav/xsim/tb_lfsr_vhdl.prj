@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../lfsr_8bit.srcs/sources_1/new/lfsr_8bit.vhd" \
+"../../../../lfsr_8bit.srcs/sim_1/new/tb_lfsr.vhd" \
+
+# Do not sort compile order
+nosort
