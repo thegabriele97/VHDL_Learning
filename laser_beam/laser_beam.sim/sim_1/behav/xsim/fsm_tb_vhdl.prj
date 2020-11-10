@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../laser_beam.srcs/sources_1/new/fsm.vhd" \
+"../../../../laser_beam.srcs/sim_1/new/fsm_tb.vhd" \
+
+# Do not sort compile order
+nosort

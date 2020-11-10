@@ -1,0 +1,11 @@
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Softwares_OS/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 00e02c5d5a4c4c688bd2ec9bcd1a9163 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_fsm_behav xil_defaultlib.tb_fsm -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-1510] unknown character 'o' in enumeration encoding is considered 'X' [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/fsm/fsm.srcs/sources_1/new/fsm.vhd:13]
+WARNING: [VRFC 10-3293] enum_encoding attribute specifies incorrect number of valid encoding values for type 'fsm_state' ; encoding ignored [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/fsm/fsm.srcs/sources_1/new/fsm.vhd:13]
+WARNING: [VRFC 10-1510] unknown character 'o' in enumeration encoding is considered 'X' [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/fsm/fsm.srcs/sources_1/new/fsm.vhd:13]
+WARNING: [VRFC 10-3293] enum_encoding attribute specifies incorrect number of valid encoding values for type 'fsm_state' ; encoding ignored [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/fsm/fsm.srcs/sources_1/new/fsm.vhd:13]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
