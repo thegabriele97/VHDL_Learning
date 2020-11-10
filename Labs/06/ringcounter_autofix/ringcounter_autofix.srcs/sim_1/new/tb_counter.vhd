@@ -15,6 +15,8 @@ architecture Behavioral of tb_counter is
             r_reg: out std_logic_vector((nbits-1) downto 0)
         );
     end component;
+    
+    for DUT: ringcounter use entity work.ringcounter(Behavioral);
 
     signal clk, enable, rst: std_logic := '0';
     signal r_reg: std_logic_vector(3 downto 0);
@@ -33,7 +35,11 @@ begin
     
     process
     begin
+    
+        rst <= '1';
+        wait for 1 ns;
         
+        rst <= '0';
         enable <= '0';
         wait for 2 ns;
         
