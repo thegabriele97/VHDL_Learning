@@ -1,0 +1,1 @@
+-wto "b11bbedac56c48eebd6881b13a46d618" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "pulse_gen_tb_behav" "xil_defaultlib.pulse_gen_tb" -log "elaborate.log" 
