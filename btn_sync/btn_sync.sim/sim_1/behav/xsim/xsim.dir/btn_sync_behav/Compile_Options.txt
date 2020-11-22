@@ -1,0 +1,1 @@
+-wto "7b2a57adf220455ebe811684e5b9e6d7" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "btn_sync_behav" "xil_defaultlib.btn_sync" -log "elaborate.log" 
