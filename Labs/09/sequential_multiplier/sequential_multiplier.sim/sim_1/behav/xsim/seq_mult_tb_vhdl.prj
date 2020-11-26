@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../sequential_multiplier.srcs/sources_1/new/fsmd_controller.vhd" \
+"../../../../sequential_multiplier.srcs/sources_1/new/fsmd_datapath.vhd" \
+"../../../../sequential_multiplier.srcs/sources_1/new/sequential_mult.vhd" \
+"../../../../sequential_multiplier.srcs/sim_1/new/seq_mult_tb.vhd" \
+
+# Do not sort compile order
+nosort
