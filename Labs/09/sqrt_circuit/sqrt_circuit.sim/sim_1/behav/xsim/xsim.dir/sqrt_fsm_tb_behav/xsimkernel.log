@@ -2,3 +2,6 @@ Running: xsim.dir/sqrt_fsm_tb_behav/xsimk.exe -simmode gui -wdb sqrt_fsm_tb_beha
 Design successfully loaded
 Design Loading Memory Usage: 5344 KB (Peak: 5344 KB)
 Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 6036 KB (Peak: 6036 KB)
+Simulation CPU Usage: 15 ms

@@ -138,10 +138,10 @@ architecture fsmd of sqrt_fsm is
     
 begin
     
+    --Datapath description
     min_val <= curr_t2 when (unsigned(curr_t2) < unsigned(curr_t1)) else curr_t1;
     max_val <= curr_t2 when (unsigned(curr_t2) > unsigned(curr_t1)) else curr_t1;
     
-    --Datapath description
     process(curr_t1, curr_t2, min_val, max_val, curr_t3, a, b, ld_t1, ld_t2, ld_t1_abs, ld_t1_min, ld_t1_max, ld_t1_sh2, ld_t1_add, ld_t2_abs, ld_t2_max, ld_t3_max_sh3, ld_t3_sub, ld_res)
     begin
     
