@@ -4,13 +4,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity Controller is
     port(
         clk, rst, hit, rw: in std_logic;
-        wr_en, en_replptr: out std_logic
+        wr_en, en_replptr, out_hit: out std_logic
     );
 end Controller;
 
 architecture Behavioral of Controller is
 
-    type fsm_state is ( wait_comm, check, update, replace );
+    type fsm_state is ( wait_comm, check, update, replace, read );
     signal curr_state, next_state: fsm_state;
 
 begin
@@ -21,6 +21,7 @@ begin
         next_state <= curr_state;
         wr_en <= '0';
         en_replptr <= '0';
+        out_hit <= '0';
         
         case curr_state is
         
@@ -28,7 +29,13 @@ begin
                 
                 if (rw = '0') then
                     next_state <= check;
+                elsif (rw = '1' and hit = '1') then
+                    next_state <= read;
                 end if;
+                
+            when read =>
+                out_hit <= '1';
+                next_state <= wait_comm;
                 
             when check =>
                 

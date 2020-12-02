@@ -16,7 +16,7 @@ end controller;
 architecture fsmd_d of controller is
 
     --Controller signals
-    type fsm_state is ( s_empty, s_write, s_read, s_full, s_idle );
+    type fsm_state is ( s_empty, s_write, s_read, s_full, s_idle, s_rw );
     signal curr_state, next_state: fsm_state;
     
     --Datapath signals
@@ -88,7 +88,9 @@ begin
                 ld_w_addr <= '1';
                 w_en <= '1';
                 
-                if (rd = '1') then  
+                if (rd = '1' and wr = '1') then
+                    next_state <= s_rw;
+                elsif (rd = '1') then  
                     next_state <= s_read;
                 elsif (wr = '1' and addr_eq = '1') then
                     next_state <= s_full;
@@ -99,7 +101,9 @@ begin
             when s_read =>
                 ld_r_addr <= '1';
                 
-                if (wr = '1') then
+                if (rd = '1' and wr = '1') then
+                    next_state <= s_rw;
+                elsif (wr = '1') then
                     next_state <= s_write;
                 elsif (rd = '1' and addr_eq = '1') then
                     next_state <= s_empty;
@@ -114,9 +118,26 @@ begin
                     next_state <= s_read;
                 end if;
                 
+            when s_rw =>
+                ld_r_addr <= '1';
+                ld_w_addr <= '1';
+                w_en <= '1';
+                
+                if (rd = '1' and wr = '1') then
+                    next_state <= s_rw;
+                elsif (rd = '1' and wr = '0') then
+                    next_state <= s_read;
+                elsif (rd = '0' and wr = '1') then
+                    next_state <= s_write;
+                elsif (rd = '0' and wr = '0') then
+                    next_state <= s_idle;
+                end if;
+                
             when s_idle =>
                 
-                if (rd = '1') then
+                if (rd = '1' and wr = '1') then
+                    next_state <= s_rw;
+                elsif (rd = '1') then
                     next_state <= s_read;
                 elsif (wr = '1') then
                     next_state <= s_write;

@@ -50,37 +50,37 @@ begin
         
         w_data <= x"0a0a";
         wr <= '1';
-        wait for 1 ns;
+        wait for 2 ns;
         assert empty = '0' report "empty not 0 after write";
         
         w_data <= x"0b0b";
         wr <= '1';
-        wait for 1 ns;
+        wait for 2 ns;
         
         w_data <= x"0c0c";
         wr <= '1';
-        wait for 1 ns;
+        wait for 2 ns;
         
         rd <= '1';
-        wait for 1 ns;
+        wait for 2 ns;
         
         for i in 0 to 6 loop
             rd <= '0';
             w_data <= std_logic_vector(TO_UNSIGNED(13 + i, 8) & TO_UNSIGNED(13 + i, 8));
-            wait for 1 ns;
+            wait for 2 ns;
         end loop;
         
         rd <= '1';
-        wait for 1 ns;
+        wait for 2 ns;
         
         w_data <= x"0b0b";
         wr <= '1';
-        wait for 1 ns;
+        wait for 2 ns;
         
         for i in 0 to 9 loop
             wr <= '0';
             rd <= '1';
-            wait for 1 ns;
+            wait for 2 ns;
         end loop;
         
         rd <= '0';

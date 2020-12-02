@@ -56,7 +56,7 @@ architecture struct of CAM is
     component Controller is
         port(
             clk, rst, hit, rw: in std_logic;
-            wr_en, en_replptr: out std_logic
+            wr_en, en_replptr, out_hit: out std_logic
         );
     end component;
 
@@ -71,8 +71,7 @@ begin
     RepPtr: ReplPtr generic map(m) port map(clk, rst, en_rp, wr_wordline); 
     
     n_wr_en <= not wr_en;
-    hit <= int_hit;
     
-    Ctrl: Controller port map(clk, rst, int_hit, n_wr_en, w_en, en_rp);
+    Ctrl: Controller port map(clk, rst, int_hit, n_wr_en, w_en, en_rp, hit);
 
 end struct;

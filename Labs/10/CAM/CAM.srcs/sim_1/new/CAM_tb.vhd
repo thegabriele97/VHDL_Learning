@@ -71,7 +71,7 @@ begin
         
         key_in <= x"FFFF";
         wr_en <= '0';
-        wait for 5 ns;
+        wait for 6 ns;
     
         key_in <= x"0F0F";
         w_data <= "000";
@@ -80,7 +80,8 @@ begin
         
         wr_en <= '0';
         wait for  3 ns;
-    
+        
+        wait for 1 ns;
         key_in <= x"5555";
         w_data <= "000";
         wr_en <= '1';
