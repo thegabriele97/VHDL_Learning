@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Exams/encrypt_decrypt/encrypt_decrypt.srcs/sources_1/new/enc_dec.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'enc_dec'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Exams/encrypt_decrypt/encrypt_decrypt.srcs/sim_1/new/enc_dec_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'enc_dec_tb'

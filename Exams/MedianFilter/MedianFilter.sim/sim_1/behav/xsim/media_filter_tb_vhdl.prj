@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../MedianFilter.srcs/sources_1/new/median_filter.vhd" \
+"../../../../MedianFilter.srcs/sim_1/new/media_filter_tb.vhd" \
+
+# Do not sort compile order
+nosort

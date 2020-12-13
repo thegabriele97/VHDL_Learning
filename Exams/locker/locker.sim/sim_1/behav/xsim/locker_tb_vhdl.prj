@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../locker.srcs/sources_1/new/locker.vhd" \
+"../../../../locker.srcs/sim_1/new/locker_tb.vhd" \
+
+# Do not sort compile order
+nosort

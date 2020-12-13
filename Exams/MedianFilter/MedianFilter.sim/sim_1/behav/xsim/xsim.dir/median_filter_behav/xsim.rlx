@@ -1,0 +1,12 @@
+
+{ 
+    crc :  2396440199689427316  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto e14d267056f443c08c9d13bd6cc28b3f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot median_filter_behav xil_defaultlib.median_filter" , 
+    buildDate : "May 27 2020" , 
+    buildTime : "20:09:33" , 
+    linkCmd : "D:\\Softwares_OS\\Xilinx\\Vivado\\2020.1\\data\\..\\tps\\mingw\\6.2.0\\win64.o\\nt\\bin\\gcc.exe -Wa,-W  -O -Wl,--stack,104857600 -o \"xsim.dir/median_filter_behav/xsimk.exe\"   \"xsim.dir/median_filter_behav/obj/xsim_0.win64.obj\" \"xsim.dir/median_filter_behav/obj/xsim_1.win64.obj\" -L\"D:\\Softwares_OS\\Xilinx\\Vivado\\2020.1\\lib\\win64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 
