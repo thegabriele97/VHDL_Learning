@@ -64,6 +64,11 @@ begin
         data <= x"00052000";
         wait for 2 ns;
         
+        row <= "00000";
+        col <= "00001";
+        data <= x"00042000";
+        wait for 2 ns;
+        
         row <= "00001";
         col <= "00001";
         data <= x"000d2b85";
@@ -77,6 +82,11 @@ begin
         row <= "00000";
         col <= "00000";
         data <= x"00044000";
+        wait for 2 ns;
+        
+        row <= "00001";
+        col <= "00000";
+        data <= x"00042000";
         wait for 2 ns;
         
         row <= "00001";

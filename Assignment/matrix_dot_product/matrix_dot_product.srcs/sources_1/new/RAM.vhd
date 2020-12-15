@@ -56,7 +56,7 @@ begin
     process(rw, oe, addr)
     begin
     
-        if (rw = '1' and oe = '1') then
+        if (rw = '1' and oe = '1' and cs = '1') then
             data <= memory(TO_INTEGER(unsigned(addr)));
         else
             data <= (others => 'Z');
