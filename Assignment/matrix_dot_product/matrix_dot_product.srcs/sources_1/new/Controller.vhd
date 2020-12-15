@@ -26,18 +26,25 @@ entity Controller is
         goreq       : in std_logic;
         gogrant     : out std_logic;
         
+        rdreq       : in std_logic;
+        rdgrant     : out std_logic;
+        
         finish      : out std_logic;
+        
+        rowext      : in std_logic_vector(4 downto 0);
+        colext      : in std_logic_vector(4 downto 0);
+        dataext     : inout std_logic_vector(31 downto 0);
         
         row0        : out std_logic_vector(4 downto 0);
         col0        : out std_logic_vector(4 downto 0);
-        data0       : inout std_logic_vector(31 downto 0);
+        data0       : in std_logic_vector(31 downto 0);
         cs0         : out std_logic;
         rw0         : out std_logic;
         oe0         : out std_logic;
         
         row1        : out std_logic_vector(4 downto 0);
         col1        : out std_logic_vector(4 downto 0);
-        data1       : inout std_logic_vector(31 downto 0);
+        data1       : in std_logic_vector(31 downto 0);
         cs1         : out std_logic;
         rw1         : out std_logic;
         oe1         : out std_logic;
@@ -56,18 +63,18 @@ architecture Behavioral of Controller is
     --Datapath signals
     signal curr_r0, next_r0, curr_c0, next_c0, curr_r1, next_r1, curr_c1, next_c1: std_logic_vector(5 downto 0);
     signal curr_r2, next_r2, curr_r3, next_r3: std_logic_vector(31 downto 0);
-    signal curr_sum, next_sum: std_logic_vector(63 downto 0);
+    signal curr_sum, next_sum, sum_buffer: std_logic_vector(63 downto 0);
     
     signal reg_inc, inc: std_logic_vector(5 downto 0);
     
     --Controller signals
-    type fsm_state is ( wait_comm, wait_wr_b0, wait_wr_b1, while_row1, while_col2, get_first, get_second, mac, store, go_on, done );
+    type fsm_state is ( wait_comm, wait_wr_b0, wait_wr_b1, confirm_write_b0, confirm_write_b1, wait_rd, confirm_rd, while_row1, while_col2, get_first, get_second, mac, store, go_on, done );
     signal curr_state, next_state: fsm_state;
     
     --Control signals
     signal mux_r0, mux_c0, mux_r1, mux_c1, mux_sum: std_logic_vector(1 downto 0);
     signal mux_inc: std_logic_vector(1 downto 0);
-    signal ld_r2, ld_r3: std_logic;
+    signal ld_r2, ld_r3, oe_sum: std_logic;
     signal end_r0, end_r1, end_c1: std_logic;
 
 begin
@@ -86,10 +93,12 @@ begin
     
     row2 <= curr_r0(4 downto 0);
     col2 <= curr_c1(4 downto 0);
-    data2 <= curr_sum(47 downto 16);
+    data2 <= sum_buffer(47 downto 16);  
+    sum_buffer <= curr_sum when (oe_sum = '1') else (others => 'Z');
     
+    dataext <= data2;
     
-    process(curr_r0, curr_r1, curr_c0, curr_c1, curr_r2, curr_r3, curr_sum, mux_r0, mux_c0, mux_r1, mux_c1, mux_sum, mux_inc, ld_r2, ld_r3, data0, data1, data2, inc)
+    process(curr_r0, curr_r1, curr_c0, curr_c1, curr_r2, curr_r3, curr_sum, mux_r0, mux_c0, mux_r1, mux_c1, mux_sum, mux_inc, ld_r2, ld_r3, data0, data1, inc, rowext, colext)
     begin
     
         --R0 register
@@ -98,6 +107,8 @@ begin
             next_r0 <= inc;
         elsif (mux_r0 = "10") then
             next_r0 <= (others => '0');
+        elsif (mux_r0 = "11") then
+            next_r0 <= '0' & rowext;
         end if;
         
         --C0 register
@@ -106,6 +117,8 @@ begin
             next_c0 <= inc;
         elsif (mux_c0 = "10") then
             next_c0 <= (others => '0');
+        elsif (mux_c0 = "11") then
+            next_c0 <= '0' & colext;
         end if;
         
         --R1 register
@@ -114,6 +127,8 @@ begin
             next_r1 <= inc;
         elsif (mux_r1 = "10") then
             next_r1 <= (others => '0');
+        elsif (mux_r1 = "11") then
+            next_r1 <= '0' & rowext;
         end if;    
         
         --C1 register
@@ -122,6 +137,8 @@ begin
             next_c1 <= inc;
         elsif (mux_c1 = "10") then
             next_c1 <= (others => '0');
+        elsif (mux_c1 = "11") then
+                next_c1 <= '0' & colext;            
         end if;                
         
         --Mux increment logic
@@ -182,7 +199,7 @@ begin
     end process;
     
     --Controller
-    process(curr_state, wreq, goreq, end_r0, end_r1, end_c1, bs)
+    process(curr_state, wreq, goreq, rdreq, end_r0, end_r1, end_c1, bs)
     begin
     
         next_state <= curr_state;
@@ -194,9 +211,11 @@ begin
         mux_inc <= "00";
         ld_r2 <= '0';
         ld_r3 <= '0';
+        oe_sum <= '0';
         
         wgrant <= '0';
-        gogrant <= '0';
+        gogrant <= '1';
+        rdgrant <= '0';
         finish <= '0';
         
         cs0 <= '0';
@@ -214,9 +233,12 @@ begin
         case curr_state is
         
             when wait_comm =>
+                gogrant <= '0';
                 mux_r0 <= "10";                 -- Preparing r0 to start from 0
-            
-                if (wreq = '1') then
+                
+                if (rdreq = '1') then
+                    next_state <= wait_rd;
+                elsif (wreq = '1') then
                     if (bs = '0') then
                         next_state <= wait_wr_b0;
                     elsif (bs = '1') then
@@ -225,28 +247,65 @@ begin
                 elsif (goreq = '1') then
                     next_state <= while_row1;
                 end if;
-                
+            
+            when wait_rd =>
+                gogrant <= '0';
+                rdgrant <= '1';
+                mux_r0 <= "11";
+                mux_c1 <= "11";
+                next_state <= confirm_rd;
+              
+            when confirm_rd =>
+                gogrant <= '0';
+                rdgrant <= '1';
+                cs2 <= '1';
+                rw2 <= '1';
+                oe2 <= '1';
+    
+                next_state <= wait_rd;
+                if (rdreq = '0') then
+                    next_state <= wait_comm;
+                end if;
+
             when wait_wr_b0 =>
+                gogrant <= '0';
                 wgrant <= '1';                  -- Enabling user to write into bank 0
+                mux_r0 <= "11";
+                mux_c0 <= "11";
+                next_state <= confirm_write_b0;
+        
+            when wait_wr_b1 =>
+                gogrant <= '0';
+                wgrant <= '1';                  -- Enabling user to write into bank 1
+                mux_r1 <= "11";
+                mux_c1 <= "11";
+                next_state <= confirm_write_b1;
+            
+            when confirm_write_b0 =>
+                gogrant <= '0';
+                wgrant <= '1';
                 rw0 <= '0';
                 cs0 <= '1';
                 
+                next_state <= wait_wr_b0;            
                 if (bs = '1') then
                     next_state <= wait_wr_b1;
                 elsif (wreq = '0') then
                     next_state <= wait_comm;
                 end if;
         
-            when wait_wr_b1 =>
-                wgrant <= '1';                  -- Enabling user to write into bank 1
+            when confirm_write_b1 =>
+                gogrant <= '0';
+                wgrant <= '1';
                 rw1 <= '0';
                 cs1 <= '1';
                 
+                next_state <= wait_wr_b1;
                 if (bs = '0') then
                     next_state <= wait_wr_b0;
                 elsif (wreq = '0') then
                     next_state <= wait_comm;
-                end if;    
+                end if;
         
             when while_row1 =>
                 mux_c1 <= "10";                 -- Preparing c1 to start from 0
@@ -285,7 +344,7 @@ begin
             when mac =>
                 mux_sum <= "01";                -- sum <- sum + (r1 * r2). This is done in 64 bit
                 
-                next_state <= while_col2;
+                next_state <= get_first;
                 if (end_r1 = '1') then
                     next_state <= store;
                 end if;
@@ -296,12 +355,14 @@ begin
                                                 -- Matrix2[r0][c1] <- sum
                 mux_inc <= "11";                -- Selected to increment c1
                 mux_c1 <= "01";                 -- Loading into c1 the new incremented value
+                oe_sum <= '1';
                 
                 next_state <= while_col2;
                 
             when go_on =>
                 mux_inc <= "00";                -- Selected to increment r0
                 mux_r0 <= "01";                 -- Loading into r0 the new incremented value
+                next_state <= while_row1;
     
             when done =>
                 finish <= '1';
