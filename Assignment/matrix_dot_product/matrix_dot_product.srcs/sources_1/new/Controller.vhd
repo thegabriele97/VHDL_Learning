@@ -254,6 +254,9 @@ begin
                 rdgrant <= '1';
                 mux_r0 <= "11";
                 mux_c1 <= "11";
+                cs2 <= '1';
+                rw2 <= '1';
+                oe2 <= '1';
                 next_state <= confirm_rd;
               
             when confirm_rd =>

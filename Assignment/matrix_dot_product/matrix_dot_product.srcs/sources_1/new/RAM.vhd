@@ -53,16 +53,18 @@ begin
     
     end process;
     
-    process(rw, oe, addr)
-    begin
+    data <= memory(TO_INTEGER(unsigned(addr))) when (rw = '1' and oe = '1' and cs = '1') else (others => 'Z');
     
-        if (rw = '1' and oe = '1' and cs = '1') then
-            data <= memory(TO_INTEGER(unsigned(addr)));
-        else
-            data <= (others => 'Z');
-        end if;
+--    process(rw, oe, addr)
+--    begin
     
-    end process;    
+--        if (rw = '1' and oe = '1' and cs = '1') then
+--            data <= memory(TO_INTEGER(unsigned(addr)));
+--        else
+--            data <= (others => 'Z');
+--        end if;
+    
+--    end process;    
    
 
 end Behavioral;

@@ -1,0 +1,6 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"matrix_dot_mul_tb_enh_time_synth.v" \
+
+# Do not sort compile order
+nosort
