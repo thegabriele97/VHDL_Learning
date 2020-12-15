@@ -33,7 +33,7 @@ entity Controller is
         
         rowext      : in std_logic_vector(4 downto 0);
         colext      : in std_logic_vector(4 downto 0);
-        dataext     : inout std_logic_vector(31 downto 0);
+        dataext     : out std_logic_vector(31 downto 0);
         
         row0        : out std_logic_vector(4 downto 0);
         col0        : out std_logic_vector(4 downto 0);
@@ -96,7 +96,8 @@ begin
     data2 <= sum_buffer(47 downto 16);  
     sum_buffer <= curr_sum when (oe_sum = '1') else (others => 'Z');
     
-    dataext <= data2;
+    dataext <= data2;   -- When matrix 2 is enabled to outputs, data will be available on data2. So data2 is redirected to
+                        -- dataext. In data2 writes the sum_buffer too but during read operations, it's in tri-state mode.
     
     process(curr_r0, curr_r1, curr_c0, curr_c1, curr_r2, curr_r3, curr_sum, mux_r0, mux_c0, mux_r1, mux_c1, mux_sum, mux_inc, ld_r2, ld_r3, data0, data1, inc, rowext, colext)
     begin

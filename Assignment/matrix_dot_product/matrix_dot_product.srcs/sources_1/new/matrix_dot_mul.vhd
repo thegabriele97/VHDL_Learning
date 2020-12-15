@@ -32,7 +32,7 @@ entity matrix_dot_mul is
         
         row         : in std_logic_vector(4 downto 0);
         col         : in std_logic_vector(4 downto 0);
-        data        : inout std_logic_vector(31 downto 0)     
+        data        : inout std_logic_vector(31 downto 0)   
     );
 end matrix_dot_mul;
 
@@ -57,7 +57,7 @@ architecture struct of matrix_dot_mul is
             
             rowext      : in std_logic_vector(4 downto 0);
             colext      : in std_logic_vector(4 downto 0);
-            dataext     : inout std_logic_vector(31 downto 0);
+            dataext     : out std_logic_vector(31 downto 0);
             
             row0        : out std_logic_vector(4 downto 0);
             col0        : out std_logic_vector(4 downto 0);
@@ -121,15 +121,17 @@ architecture struct of matrix_dot_mul is
     
     signal row2: std_logic_vector(4 downto 0);
     signal col2: std_logic_vector(4 downto 0);
-    signal data2, trash: std_logic_vector(31 downto 0);
+    signal data2, data_buffered: std_logic_vector(31 downto 0);
     signal cs2: std_logic;
     signal rw2: std_logic;
     signal oe2: std_logic;
+    
+    signal read_grant_int, write_grant_int: std_logic;
 
 begin
 
-    data0 <= data;
-    data1 <= data;
+    data0 <= data when (write_grant_int = '1') else (others => 'Z');
+    data1 <= data when (write_grant_int = '1') else (others => 'Z');
     
     Matrix0: MXM generic map(r, c, w) port map(
         clk => clk,
@@ -168,16 +170,16 @@ begin
         clk => clk,
         rst => rst,
         wreq => wreq,
-        wgrant => wgrant,
+        wgrant => write_grant_int,
         bs => bs,
         goreq => goreq,
         gogrant => gogrant,
         rdreq => rdreq,
-        rdgrant => rdgrant,
+        rdgrant => read_grant_int,
         finish => finish,
         rowext => row,
         colext => col,
-        dataext => data,
+        dataext => data_buffered,
         row0 => row0,
         col0 => col0,
         data0 => data0,
@@ -197,5 +199,9 @@ begin
         oe1 => oe1,
         oe2 => oe2
     );
+
+    data <= data_buffered when (read_grant_int = '1') else (others => 'Z');
+    rdgrant <= read_grant_int;
+    wgrant <= write_grant_int;
 
 end struct;
