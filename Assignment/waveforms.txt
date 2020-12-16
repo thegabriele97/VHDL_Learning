@@ -1,0 +1,14 @@
+https://wavedrom.com/editor.html?%7Bsignal%3A%20%5B%0A%20%20%7Bname%3A%20%27clk%27%2C%20wave%3A%20%27P........%7C..........%27%7D%2C%0A%20%20%7Bname%3A%20%27wreq%27%2C%20wave%3A%20%2701...0...%7C..........%27%7D%2C%0A%20%20%7Bname%3A%20%27bs%27%2C%20wave%3A%20%27u0.....u.%7C..........%27%7D%2C%0A%20%20%7Bname%3A%20%27wgrant%27%2C%20wave%3A%20%270.1....0.%7C..........%27%7D%2C%0A%20%20%7Bname%3A%20%27rdreq%27%2C%20wave%3A%20%270........%7C.1...0....%27%7D%2C%0A%20%20%7Bname%3A%20%27rdrant%27%2C%20wave%3A%20%270........%7C..1....0..%27%7D%2C%0A%20%20%7Bname%3A%20%27row%27%2C%20wave%3A%20%27zx5.4..xz%7C.x5.4..xz.%27%2C%20data%3A%20%5B%22row%201%22%2C%20%22row%202%22%2C%20%22row%201%22%2C%20%22row%202%22%5D%7D%2C%0A%20%20%7Bname%3A%20%27col%27%2C%20wave%3A%20%27zx7.8..xz%7C.x7.8..xz.%27%2C%20data%3A%20%5B%22col%201%22%2C%20%22col%202%22%2C%20%22col%201%22%2C%20%22col%202%22%5D%7D%2C%0A%20%20%7Bname%3A%20%27data%27%2C%20wave%3A%20%27zx6.9..xz%7C..x6.9.zz.%27%2C%20data%3A%20%5B%22data%201%22%2C%20%22data%202%22%2C%20%22data%201%22%2C%20%22data%202%22%5D%7D%2C%0A%5D%7D%0A
+
+
+{signal: [
+  {name: 'clk', wave: 'P........|..........'},
+  {name: 'wreq', wave: '01...0...|..........'},
+  {name: 'bs', wave: 'u0.....u.|..........'},
+  {name: 'wgrant', wave: '0.1....0.|..........'},
+  {name: 'rdreq', wave: '0........|.1...0....'},
+  {name: 'rdrant', wave: '0........|..1....0..'},
+  {name: 'row', wave: 'zx5.4..xz|.x5.4..xz.', data: ["row 1", "row 2", "row 1", "row 2"]},
+  {name: 'col', wave: 'zx7.8..xz|.x7.8..xz.', data: ["col 1", "col 2", "col 1", "col 2"]},
+  {name: 'data', wave: 'zx6.9..xz|..x6.9.zz.', data: ["data 1", "data 2", "data 1", "data 2"]},
+]}
