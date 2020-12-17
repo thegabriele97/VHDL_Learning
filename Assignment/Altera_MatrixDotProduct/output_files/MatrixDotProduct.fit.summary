@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Dec 17 19:20:03 2020
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : MatrixDotProduct
+Top-level Entity Name : MatrixDotProduct
+Family : Cyclone IV E
+Device : EP4CE6E22C8
+Timing Models : Final
+Total logic elements : 993 / 6,272 ( 16 % )
+    Total combinational functions : 957 / 6,272 ( 15 % )
+    Dedicated logic registers : 467 / 6,272 ( 7 % )
+Total registers : 467
+Total pins : 23 / 92 ( 25 % )
+Total virtual pins : 0
+Total memory bits : 98,304 / 276,480 ( 36 % )
+Embedded Multiplier 9-bit elements : 8 / 30 ( 27 % )
+Total PLLs : 1 / 2 ( 50 % )

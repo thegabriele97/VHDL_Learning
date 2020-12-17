@@ -1,0 +1,30 @@
+
+State Machine - |MatrixDotProduct|debouncer:debouncer1|curr_state
+Name curr_state.wait_bi_off curr_state.now_on curr_state.wait_bi 
+curr_state.wait_bi 0 0 0 
+curr_state.now_on 0 1 1 
+curr_state.wait_bi_off 1 0 1 
+
+State Machine - |MatrixDotProduct|debouncer:debouncer0|curr_state
+Name curr_state.wait_bi_off curr_state.now_on curr_state.wait_bi 
+curr_state.wait_bi 0 0 0 
+curr_state.now_on 0 1 1 
+curr_state.wait_bi_off 1 0 1 
+
+State Machine - |MatrixDotProduct|matrix_dot_mul:MdM|Controller:Ctrl|curr_state
+Name curr_state.done curr_state.go_on curr_state.store curr_state.mac curr_state.get_second curr_state.get_first curr_state.while_col2 curr_state.while_row1 curr_state.confirm_rd curr_state.wait_rd curr_state.confirm_write_b1 curr_state.confirm_write_b0 curr_state.wait_wr_b1 curr_state.wait_wr_b0 curr_state.wait_comm 
+curr_state.wait_comm 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+curr_state.wait_wr_b0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+curr_state.wait_wr_b1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+curr_state.confirm_write_b0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+curr_state.confirm_write_b1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+curr_state.wait_rd 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+curr_state.confirm_rd 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+curr_state.while_row1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+curr_state.while_col2 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+curr_state.get_first 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+curr_state.get_second 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+curr_state.mac 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+curr_state.store 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+curr_state.go_on 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+curr_state.done 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
