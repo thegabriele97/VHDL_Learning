@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Thu Dec 17 19:24:42 2020
+Analysis & Synthesis Status : Successful - Fri Dec 18 00:23:06 2020
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : MatrixDotProduct
 Top-level Entity Name : MatrixDotProduct
 Family : Cyclone IV E
-Total logic elements : 1,010
-    Total combinational functions : 973
-    Dedicated logic registers : 499
-Total registers : 499
+Total logic elements : 980
+    Total combinational functions : 943
+    Dedicated logic registers : 496
+Total registers : 496
 Total pins : 23
 Total virtual pins : 0
 Total memory bits : 98,304

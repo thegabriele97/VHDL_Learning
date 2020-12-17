@@ -16,10 +16,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "beep",
-					"strict" : false
-				},
-				{
 					"name" : "seg[0]",
 					"strict" : false
 				},
@@ -73,6 +69,10 @@
 				},
 				{
 					"name" : "rdreq_n",
+					"strict" : false
+				},
+				{
+					"name" : "clk_in",
 					"strict" : false
 				},
 				{

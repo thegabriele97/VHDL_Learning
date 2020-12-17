@@ -1,0 +1,24 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity RowReader is
+	port(
+		clk	: in std_logic;
+		rst	: in std_logic;
+		
+		nreq	: in std_logic;
+		nrow	: in std_logic
+		
+		row	: out std_logic_vector(4 downto 0);
+		col	: out std_logic_vector(4 downto 0)
+	);
+end entity;
+
+architecture behav of RowReader is
+
+	
+
+begin
+
+end behav;

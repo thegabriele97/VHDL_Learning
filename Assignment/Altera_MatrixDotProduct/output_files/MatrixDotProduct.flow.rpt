@@ -1,5 +1,5 @@
 Flow report for MatrixDotProduct
-Thu Dec 17 19:24:42 2020
+Fri Dec 18 00:23:29 2020
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,22 +41,22 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Dec 17 19:24:42 2020       ;
+; Flow Status                        ; Successful - Fri Dec 18 00:23:29 2020       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; MatrixDotProduct                            ;
 ; Top-level Entity Name              ; MatrixDotProduct                            ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE6E22C8                                 ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1,010                                       ;
-;     Total combinational functions  ; 973                                         ;
-;     Dedicated logic registers      ; 499                                         ;
-; Total registers                    ; 499                                         ;
-; Total pins                         ; 23                                          ;
+; Total logic elements               ; 975 / 6,272 ( 16 % )                        ;
+;     Total combinational functions  ; 943 / 6,272 ( 15 % )                        ;
+;     Dedicated logic registers      ; 464 / 6,272 ( 7 % )                         ;
+; Total registers                    ; 464                                         ;
+; Total pins                         ; 23 / 92 ( 25 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 98,304                                      ;
-; Embedded Multiplier 9-bit elements ; 8                                           ;
-; Total PLLs                         ; 1                                           ;
+; Total memory bits                  ; 98,304 / 276,480 ( 36 % )                   ;
+; Embedded Multiplier 9-bit elements ; 8 / 30 ( 27 % )                             ;
+; Total PLLs                         ; 1 / 2 ( 50 % )                              ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/17/2020 19:24:02 ;
+; Start date & time ; 12/18/2020 00:22:27 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MatrixDotProduct    ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 228800460445041.160822944219940        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 228800460445041.160824734708960        ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -111,8 +111,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:39     ; 1.0                     ; 4842 MB             ; 00:00:58                           ;
-; Total                ; 00:00:39     ; --                      ; --                  ; 00:00:58                           ;
+; Analysis & Synthesis ; 00:00:37     ; 1.0                     ; 4842 MB             ; 00:00:59                           ;
+; Fitter               ; 00:00:09     ; 1.1                     ; 5516 MB             ; 00:00:11                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4691 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.1                     ; 4777 MB             ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4651 MB             ; 00:00:03                           ;
+; Total                ; 00:00:55     ; --                      ; --                  ; 00:01:18                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -122,6 +126,10 @@ https://fpgasoftware.intel.com/eula.
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; DESKTOP-F1D4ON6  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-F1D4ON6  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-F1D4ON6  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-F1D4ON6  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-F1D4ON6  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -129,6 +137,10 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off MatrixDotProduct -c MatrixDotProduct
+quartus_fit --read_settings_files=off --write_settings_files=off MatrixDotProduct -c MatrixDotProduct
+quartus_asm --read_settings_files=off --write_settings_files=off MatrixDotProduct -c MatrixDotProduct
+quartus_sta MatrixDotProduct -c MatrixDotProduct
+quartus_eda --read_settings_files=off --write_settings_files=off MatrixDotProduct -c MatrixDotProduct
 
 
 

@@ -1,4 +1,10 @@
 
+State Machine - |MatrixDotProduct|RowReader:RowReader0|curr_state
+Name curr_state.inc_col curr_state.inc_row curr_state.wait_something 
+curr_state.wait_something 0 0 0 
+curr_state.inc_row 0 1 1 
+curr_state.inc_col 1 0 1 
+
 State Machine - |MatrixDotProduct|debouncer:debouncer1|curr_state
 Name curr_state.wait_bi_off curr_state.now_on curr_state.wait_bi 
 curr_state.wait_bi 0 0 0 

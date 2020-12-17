@@ -81,6 +81,19 @@ architecture struct of MatrixDotProduct is
 		);
 	end component;
 	
+	component RowReader is
+		port(
+			clk		: in std_logic;
+			rst		: in std_logic;
+			
+			nrow_req	: in std_logic;
+			ncol_req	: in std_logic;
+			
+			row		: out std_logic_vector(4 downto 0);
+			col		: out std_logic_vector(4 downto 0)
+		);
+	end component;
+	
 	signal clk_5khz, clk_1hz: std_LOGIC;
 	signal rst, rdreq, goreq, wgrant, gogrant, rdgrant, finish: std_logic;
 	signal irow, icol: std_logic_vector(4 downto 0);
@@ -93,10 +106,14 @@ architecture struct of MatrixDotProduct is
 begin
 	
 	pll0: pll_altera port map(clk_in, clk_5khz);
-	MdM: matrix_dot_mul port map(clk_5khz, rst, '0', wgrant, '0', goreq, gogrant, rdreq, rdgrant, finish, irow, icol, idata);
+	
+	MdM: matrix_dot_mul port map(clk_in, rst, '0', wgrant, '0', goreq, gogrant, rdreq, rdgrant, finish, irow, icol, idata);
 	HexCtrl: DigitalTubeHexController port map(clk_5khz, rst, idata(23 downto 8), iseg, dig);
-	debouncer0: Debouncer port map(clk_1hz, rst, nrow, nrow_req);
-	debouncer1: Debouncer port map(clk_1hz, rst, ncol, ncol_req);
+	
+	debouncer0: Debouncer port map(clk_5khz, rst, nrow, nrow_req);
+	debouncer1: Debouncer port map(clk_5khz, rst, ncol, ncol_req);
+	RowReader0: RowReader port map(clk_5khz, rst, nrow_req, ncol_req, irow, icol);
+	
 	
 	rst <= not rst_n;
 	rdreq <= not rdreq_n;
@@ -111,27 +128,8 @@ begin
 	
 	nrow <= not nrow_n;
 	ncol <= not ncol_n;
-	beep <= ncol_req;
+	beep <= '0';
 	
-	process(nrow_req, ncol_req, rst, rdgrant)
-	begin
-	
-		if (rst = '1' or rdgrant = '0') then
-			irow <= "00000";
-			icol <= "00000";
-		else
-
-			if (nrow_req = '1') then
-				irow <= std_logic_vector(unsigned(irow) + 1);
-			end if;
-			
-			if (ncol_req = '1') then
-				icol <= std_logic_vector(unsigned(icol) + 1);
-			end if;
-		
-		end if;
-	
-	end process;
 	
 	--1 Hz clock generation
 	next_cnt <= std_logic_vector((unsigned(curr_cnt) + 1)) when (unsigned(curr_cnt) /= 5000) else (others => '0');

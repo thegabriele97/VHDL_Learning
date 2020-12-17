@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MatrixDotProduct
-Thu Dec 17 19:24:42 2020
+Fri Dec 18 00:23:06 2020
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -16,10 +16,10 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis DSP Block Usage Summary
  10. Analysis & Synthesis IP Cores Summary
- 11. State Machine - |MatrixDotProduct|debouncer:debouncer1|curr_state
- 12. State Machine - |MatrixDotProduct|debouncer:debouncer0|curr_state
- 13. State Machine - |MatrixDotProduct|matrix_dot_mul:MdM|Controller:Ctrl|curr_state
- 14. User-Specified and Inferred Latches
+ 11. State Machine - |MatrixDotProduct|RowReader:RowReader0|curr_state
+ 12. State Machine - |MatrixDotProduct|debouncer:debouncer1|curr_state
+ 13. State Machine - |MatrixDotProduct|debouncer:debouncer0|curr_state
+ 14. State Machine - |MatrixDotProduct|matrix_dot_mul:MdM|Controller:Ctrl|curr_state
  15. Registers Removed During Synthesis
  16. Removed Registers Triggering Further Register Optimizations
  17. General Register Statistics
@@ -71,15 +71,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Dec 17 19:24:42 2020       ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec 18 00:23:06 2020       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; MatrixDotProduct                            ;
 ; Top-level Entity Name              ; MatrixDotProduct                            ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1,010                                       ;
-;     Total combinational functions  ; 973                                         ;
-;     Dedicated logic registers      ; 499                                         ;
-; Total registers                    ; 499                                         ;
+; Total logic elements               ; 980                                         ;
+;     Total combinational functions  ; 943                                         ;
+;     Dedicated logic registers      ; 496                                         ;
+; Total registers                    ; 496                                         ;
 ; Total pins                         ; 23                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 98,304                                      ;
@@ -206,6 +206,7 @@ https://fpgasoftware.intel.com/eula.
 ; Vhdl1.vhd                                                          ; yes             ; User VHDL File                               ; C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/Vhdl1.vhd                                                          ;             ;
 ; ram_mxm_altera_mod.vhd                                             ; yes             ; User Wizard-Generated File                   ; C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/ram_mxm_altera_mod.vhd                                             ;             ;
 ; Debouncer.vhd                                                      ; yes             ; User VHDL File                               ; C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/Debouncer.vhd                                                      ;             ;
+; RowReader.vhd                                                      ; yes             ; User VHDL File                               ; C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/RowReader.vhd                                                      ;             ;
 ; altpll.tdf                                                         ; yes             ; Megafunction                                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altpll.tdf                                                                                     ;             ;
 ; aglobal201.inc                                                     ; yes             ; Megafunction                                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                                                                 ;             ;
 ; stratix_pll.inc                                                    ; yes             ; Megafunction                                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_pll.inc                                                                                ;             ;
@@ -248,20 +249,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 1,010                    ;
+; Estimated Total logic elements              ; 980                      ;
 ;                                             ;                          ;
-; Total combinational functions               ; 973                      ;
+; Total combinational functions               ; 943                      ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 301                      ;
-;     -- 3 input functions                    ; 409                      ;
-;     -- <=2 input functions                  ; 263                      ;
+;     -- 4 input functions                    ; 286                      ;
+;     -- 3 input functions                    ; 406                      ;
+;     -- <=2 input functions                  ; 251                      ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 784                      ;
-;     -- arithmetic mode                      ; 189                      ;
+;     -- normal mode                          ; 767                      ;
+;     -- arithmetic mode                      ; 176                      ;
 ;                                             ;                          ;
-; Total registers                             ; 499                      ;
-;     -- Dedicated logic registers            ; 499                      ;
+; Total registers                             ; 496                      ;
+;     -- Dedicated logic registers            ; 496                      ;
 ;     -- I/O registers                        ; 0                        ;
 ;                                             ;                          ;
 ; I/O pins                                    ; 23                       ;
@@ -274,8 +275,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 458                      ;
-; Total fan-out                               ; 7345                     ;
-; Average fan-out                             ; 4.50                     ;
+; Total fan-out                               ; 7250                     ;
+; Average fan-out                             ; 4.53                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -284,12 +285,13 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                          ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |MatrixDotProduct                                                                                                                       ; 973 (42)            ; 499 (16)                  ; 98304       ; 8            ; 0       ; 4         ; 23   ; 0            ; |MatrixDotProduct                                                                                                                                                                                                                                                                                                                                            ; MatrixDotProduct                  ; work         ;
+; |MatrixDotProduct                                                                                                                       ; 943 (1)             ; 496 (0)                   ; 98304       ; 8            ; 0       ; 4         ; 23   ; 0            ; |MatrixDotProduct                                                                                                                                                                                                                                                                                                                                            ; MatrixDotProduct                  ; work         ;
 ;    |DigitalTubeHexController:HexCtrl|                                                                                                   ; 21 (21)             ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|DigitalTubeHexController:HexCtrl                                                                                                                                                                                                                                                                                                           ; DigitalTubeHexController          ; work         ;
+;    |RowReader:RowReader0|                                                                                                               ; 15 (15)             ; 13 (13)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|RowReader:RowReader0                                                                                                                                                                                                                                                                                                                       ; RowReader                         ; work         ;
 ;    |debouncer:debouncer0|                                                                                                               ; 3 (3)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|debouncer:debouncer0                                                                                                                                                                                                                                                                                                                       ; debouncer                         ; work         ;
 ;    |debouncer:debouncer1|                                                                                                               ; 3 (3)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|debouncer:debouncer1                                                                                                                                                                                                                                                                                                                       ; debouncer                         ; work         ;
-;    |matrix_dot_mul:MdM|                                                                                                                 ; 698 (16)            ; 345 (0)                   ; 98304       ; 8            ; 0       ; 4         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM                                                                                                                                                                                                                                                                                                                         ; matrix_dot_mul                    ; work         ;
-;       |Controller:Ctrl|                                                                                                                 ; 303 (243)           ; 147 (147)                 ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|Controller:Ctrl                                                                                                                                                                                                                                                                                                         ; Controller                        ; work         ;
+;    |matrix_dot_mul:MdM|                                                                                                                 ; 694 (16)            ; 345 (0)                   ; 98304       ; 8            ; 0       ; 4         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM                                                                                                                                                                                                                                                                                                                         ; matrix_dot_mul                    ; work         ;
+;       |Controller:Ctrl|                                                                                                                 ; 297 (237)           ; 147 (147)                 ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|Controller:Ctrl                                                                                                                                                                                                                                                                                                         ; Controller                        ; work         ;
 ;          |lpm_mult:Mult0|                                                                                                               ; 60 (0)              ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|Controller:Ctrl|lpm_mult:Mult0                                                                                                                                                                                                                                                                                          ; lpm_mult                          ; work         ;
 ;             |mult_7dt:auto_generated|                                                                                                   ; 60 (60)             ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|Controller:Ctrl|lpm_mult:Mult0|mult_7dt:auto_generated                                                                                                                                                                                                                                                                  ; mult_7dt                          ; work         ;
 ;       |MXM:Matrix0|                                                                                                                     ; 127 (32)            ; 66 (0)                    ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix0                                                                                                                                                                                                                                                                                                             ; MXM                               ; work         ;
@@ -299,19 +301,19 @@ https://fpgasoftware.intel.com/eula.
 ;                   |altsyncram_tqq2:altsyncram1|                                                                                         ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix0|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|altsyncram_tqq2:altsyncram1                                                                                                                                                                               ; altsyncram_tqq2                   ; work         ;
 ;                   |sld_mod_ram_rom:mgl_prim2|                                                                                           ; 95 (73)             ; 66 (57)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix0|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                 ; sld_mod_ram_rom                   ; work         ;
 ;                      |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|                                                               ; 22 (22)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix0|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                                                                              ; sld_rom_sr                        ; work         ;
-;       |MXM:Matrix1|                                                                                                                     ; 126 (32)            ; 66 (0)                    ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix1                                                                                                                                                                                                                                                                                                             ; MXM                               ; work         ;
-;          |ram_mxm_altera_mod:RamMatrixAltera|                                                                                           ; 94 (0)              ; 66 (0)                    ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix1|ram_mxm_altera_mod:RamMatrixAltera                                                                                                                                                                                                                                                                          ; ram_mxm_altera_mod                ; work         ;
-;             |altsyncram:altsyncram_component|                                                                                           ; 94 (0)              ; 66 (0)                    ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix1|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component                                                                                                                                                                                                                                          ; altsyncram                        ; work         ;
-;                |altsyncram_u8t3:auto_generated|                                                                                         ; 94 (0)              ; 66 (0)                    ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix1|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated                                                                                                                                                                                                           ; altsyncram_u8t3                   ; work         ;
+;       |MXM:Matrix1|                                                                                                                     ; 127 (32)            ; 66 (0)                    ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix1                                                                                                                                                                                                                                                                                                             ; MXM                               ; work         ;
+;          |ram_mxm_altera_mod:RamMatrixAltera|                                                                                           ; 95 (0)              ; 66 (0)                    ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix1|ram_mxm_altera_mod:RamMatrixAltera                                                                                                                                                                                                                                                                          ; ram_mxm_altera_mod                ; work         ;
+;             |altsyncram:altsyncram_component|                                                                                           ; 95 (0)              ; 66 (0)                    ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix1|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component                                                                                                                                                                                                                                          ; altsyncram                        ; work         ;
+;                |altsyncram_u8t3:auto_generated|                                                                                         ; 95 (0)              ; 66 (0)                    ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix1|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated                                                                                                                                                                                                           ; altsyncram_u8t3                   ; work         ;
 ;                   |altsyncram_tqq2:altsyncram1|                                                                                         ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix1|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|altsyncram_tqq2:altsyncram1                                                                                                                                                                               ; altsyncram_tqq2                   ; work         ;
-;                   |sld_mod_ram_rom:mgl_prim2|                                                                                           ; 94 (72)             ; 66 (57)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix1|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                 ; sld_mod_ram_rom                   ; work         ;
+;                   |sld_mod_ram_rom:mgl_prim2|                                                                                           ; 95 (73)             ; 66 (57)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix1|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                 ; sld_mod_ram_rom                   ; work         ;
 ;                      |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|                                                               ; 22 (22)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix1|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                                                                              ; sld_rom_sr                        ; work         ;
-;       |MXM:Matrix2|                                                                                                                     ; 126 (32)            ; 66 (0)                    ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix2                                                                                                                                                                                                                                                                                                             ; MXM                               ; work         ;
-;          |ram_mxm_altera_mod:RamMatrixAltera|                                                                                           ; 94 (0)              ; 66 (0)                    ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix2|ram_mxm_altera_mod:RamMatrixAltera                                                                                                                                                                                                                                                                          ; ram_mxm_altera_mod                ; work         ;
-;             |altsyncram:altsyncram_component|                                                                                           ; 94 (0)              ; 66 (0)                    ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix2|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component                                                                                                                                                                                                                                          ; altsyncram                        ; work         ;
-;                |altsyncram_u8t3:auto_generated|                                                                                         ; 94 (0)              ; 66 (0)                    ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix2|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated                                                                                                                                                                                                           ; altsyncram_u8t3                   ; work         ;
+;       |MXM:Matrix2|                                                                                                                     ; 127 (32)            ; 66 (0)                    ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix2                                                                                                                                                                                                                                                                                                             ; MXM                               ; work         ;
+;          |ram_mxm_altera_mod:RamMatrixAltera|                                                                                           ; 95 (0)              ; 66 (0)                    ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix2|ram_mxm_altera_mod:RamMatrixAltera                                                                                                                                                                                                                                                                          ; ram_mxm_altera_mod                ; work         ;
+;             |altsyncram:altsyncram_component|                                                                                           ; 95 (0)              ; 66 (0)                    ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix2|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component                                                                                                                                                                                                                                          ; altsyncram                        ; work         ;
+;                |altsyncram_u8t3:auto_generated|                                                                                         ; 95 (0)              ; 66 (0)                    ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix2|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated                                                                                                                                                                                                           ; altsyncram_u8t3                   ; work         ;
 ;                   |altsyncram_tqq2:altsyncram1|                                                                                         ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix2|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|altsyncram_tqq2:altsyncram1                                                                                                                                                                               ; altsyncram_tqq2                   ; work         ;
-;                   |sld_mod_ram_rom:mgl_prim2|                                                                                           ; 94 (72)             ; 66 (57)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix2|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                 ; sld_mod_ram_rom                   ; work         ;
+;                   |sld_mod_ram_rom:mgl_prim2|                                                                                           ; 95 (73)             ; 66 (57)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix2|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                 ; sld_mod_ram_rom                   ; work         ;
 ;                      |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|                                                               ; 22 (22)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix2|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                                                                              ; sld_rom_sr                        ; work         ;
 ;    |pll_altera:pll0|                                                                                                                    ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|pll_altera:pll0                                                                                                                                                                                                                                                                                                                            ; pll_altera                        ; work         ;
 ;       |altpll:altpll_component|                                                                                                         ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MatrixDotProduct|pll_altera:pll0|altpll:altpll_component                                                                                                                                                                                                                                                                                                    ; altpll                            ; work         ;
@@ -375,6 +377,18 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 
 
 Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------+
+; State Machine - |MatrixDotProduct|RowReader:RowReader0|curr_state                               ;
++---------------------------+--------------------+--------------------+---------------------------+
+; Name                      ; curr_state.inc_col ; curr_state.inc_row ; curr_state.wait_something ;
++---------------------------+--------------------+--------------------+---------------------------+
+; curr_state.wait_something ; 0                  ; 0                  ; 0                         ;
+; curr_state.inc_row        ; 0                  ; 1                  ; 1                         ;
+; curr_state.inc_col        ; 1                  ; 0                  ; 1                         ;
++---------------------------+--------------------+--------------------+---------------------------+
+
+
+Encoding Type:  One-Hot
 +------------------------------------------------------------------------------------------+
 ; State Machine - |MatrixDotProduct|debouncer:debouncer1|curr_state                        ;
 +------------------------+------------------------+-------------------+--------------------+
@@ -422,26 +436,6 @@ Encoding Type:  One-Hot
 +-----------------------------+-----------------+------------------+------------------+----------------+-----------------------+----------------------+-----------------------+-----------------------+-----------------------+--------------------+-----------------------------+-----------------------------+-----------------------+-----------------------+----------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                                   ;
-+-----------------------------------------------------+----------------------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal                    ; Free of Timing Hazards ;
-+-----------------------------------------------------+----------------------------------------+------------------------+
-; icol[0]                                             ; debouncer:debouncer1|curr_state.now_on ; yes                    ;
-; irow[0]                                             ; debouncer:debouncer0|curr_state.now_on ; yes                    ;
-; irow[1]                                             ; debouncer:debouncer0|curr_state.now_on ; yes                    ;
-; icol[1]                                             ; debouncer:debouncer1|curr_state.now_on ; yes                    ;
-; irow[2]                                             ; debouncer:debouncer0|curr_state.now_on ; yes                    ;
-; icol[2]                                             ; debouncer:debouncer1|curr_state.now_on ; yes                    ;
-; icol[3]                                             ; debouncer:debouncer1|curr_state.now_on ; yes                    ;
-; irow[3]                                             ; debouncer:debouncer0|curr_state.now_on ; yes                    ;
-; irow[4]                                             ; debouncer:debouncer0|curr_state.now_on ; yes                    ;
-; icol[4]                                             ; debouncer:debouncer1|curr_state.now_on ; yes                    ;
-; Number of user-specified and inferred latches = 10  ;                                        ;                        ;
-+-----------------------------------------------------+----------------------------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
 +---------------------------------------------------------------------------------------------------------+
 ; Registers Removed During Synthesis                                                                      ;
 +----------------------------------------------------------------+----------------------------------------+
@@ -484,12 +478,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 499   ;
-; Number of registers using Synchronous Clear  ; 86    ;
+; Total registers                              ; 496   ;
+; Number of registers using Synchronous Clear  ; 80    ;
 ; Number of registers using Synchronous Load   ; 39    ;
 ; Number of registers using Asynchronous Clear ; 151   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 408   ;
+; Number of registers using Clock Enable       ; 418   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -510,33 +504,35 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                                                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix0|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[5]                                     ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix0|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[6]                                                ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |MatrixDotProduct|RowReader:RowReader0|curr_row[2]                                                                                                                                                                                              ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |MatrixDotProduct|RowReader:RowReader0|curr_col[0]                                                                                                                                                                                              ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix0|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[0]                                     ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix0|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[24]                                               ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix1|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[2]                                     ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix1|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[22]                                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix1|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[5]                                                ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix2|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[3]                                     ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix2|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[11]                                               ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix0|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[4]                                                ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix1|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[4]                                                ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix2|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[5]                                                ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |MatrixDotProduct|curr_cnt[4]                                                                                                                                                                                                                   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix2|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[6]                                                ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix0|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[9]                                                ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix1|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[0]                                                ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix2|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[8]                                                ;
 ; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|Controller:Ctrl|curr_r0[3]                                                                                                                                                                                 ;
 ; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|Controller:Ctrl|curr_c1[0]                                                                                                                                                                                 ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix0|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[3] ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix0|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[4] ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix1|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[0] ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix2|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[0] ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|Controller:Ctrl|curr_sum[11]                                                                                                                                                                               ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix2|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[4] ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|Controller:Ctrl|curr_sum[48]                                                                                                                                                                               ;
 ; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|Controller:Ctrl|curr_r1[3]                                                                                                                                                                                 ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|Controller:Ctrl|curr_c0[1]                                                                                                                                                                                 ;
-; 26:1               ; 4 bits    ; 68 LEs        ; 48 LEs               ; 20 LEs                 ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix0|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[1]      ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|Controller:Ctrl|curr_c0[2]                                                                                                                                                                                 ;
+; 26:1               ; 4 bits    ; 68 LEs        ; 48 LEs               ; 20 LEs                 ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix0|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[2]      ;
 ; 26:1               ; 4 bits    ; 68 LEs        ; 48 LEs               ; 20 LEs                 ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix1|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]      ;
-; 26:1               ; 4 bits    ; 68 LEs        ; 48 LEs               ; 20 LEs                 ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix2|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[3]      ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|Controller:Ctrl|curr_r2[15]                                                                                                                                                                                ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|Controller:Ctrl|curr_r3[4]                                                                                                                                                                                 ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|Controller:Ctrl|curr_sum[19]                                                                                                                                                                               ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |MatrixDotProduct|DigitalTubeHexController:HexCtrl|Mux3                                                                                                                                                                                         ;
+; 26:1               ; 4 bits    ; 68 LEs        ; 48 LEs               ; 20 LEs                 ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|MXM:Matrix2|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[1]      ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|Controller:Ctrl|curr_r2[18]                                                                                                                                                                                ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|Controller:Ctrl|curr_r3[6]                                                                                                                                                                                 ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |MatrixDotProduct|matrix_dot_mul:MdM|Controller:Ctrl|curr_sum[22]                                                                                                                                                                               ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |MatrixDotProduct|DigitalTubeHexController:HexCtrl|Mux2                                                                                                                                                                                         ;
 ; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |MatrixDotProduct|matrix_dot_mul:MdM|Controller:Ctrl|next_state                                                                                                                                                                                 ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |MatrixDotProduct|matrix_dot_mul:MdM|Controller:Ctrl|reg_inc[0]                                                                                                                                                                                 ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; No         ; |MatrixDotProduct|RowReader:RowReader0|curr_state                                                                                                                                                                                               ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |MatrixDotProduct|matrix_dot_mul:MdM|Controller:Ctrl|reg_inc[4]                                                                                                                                                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1313,31 +1309,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 104                         ;
-; cycloneiii_ff         ; 369                         ;
+; cycloneiii_ff         ; 366                         ;
 ;     CLR               ; 24                          ;
 ;     ENA               ; 208                         ;
 ;     ENA CLR           ; 21                          ;
 ;     ENA CLR SLD       ; 30                          ;
-;     ENA SCLR          ; 47                          ;
-;     SCLR              ; 26                          ;
-;     plain             ; 13                          ;
-; cycloneiii_lcell_comb ; 778                         ;
-;     arith             ; 180                         ;
-;         2 data inputs ; 73                          ;
-;         3 data inputs ; 107                         ;
-;     normal            ; 598                         ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 23                          ;
+;     ENA SCLR          ; 57                          ;
+;     SCLR              ; 10                          ;
+;     plain             ; 16                          ;
+; cycloneiii_lcell_comb ; 749                         ;
+;     arith             ; 167                         ;
+;         2 data inputs ; 62                          ;
+;         3 data inputs ; 105                         ;
+;     normal            ; 582                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 22                          ;
 ;         2 data inputs ; 135                         ;
-;         3 data inputs ; 223                         ;
-;         4 data inputs ; 216                         ;
+;         3 data inputs ; 222                         ;
+;         4 data inputs ; 201                         ;
 ; cycloneiii_mac_mult   ; 4                           ;
 ; cycloneiii_mac_out    ; 4                           ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 96                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 2.76                        ;
+; Max LUT depth         ; 6.90                        ;
+; Average LUT depth     ; 2.72                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1356,7 +1352,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Dec 17 19:24:01 2020
+    Info: Processing started: Fri Dec 18 00:22:27 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MatrixDotProduct -c MatrixDotProduct
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1387,22 +1383,12 @@ Info (12021): Found 2 design units, including 1 entities, in source file ram_mxm
 Info (12021): Found 2 design units, including 1 entities, in source file debouncer.vhd
     Info (12022): Found design unit 1: debouncer-behav File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/Debouncer.vhd Line: 14
     Info (12023): Found entity 1: debouncer File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/Debouncer.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file rowreader.vhd
+    Info (12022): Found design unit 1: RowReader-behav File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/RowReader.vhd Line: 18
+    Info (12023): Found entity 1: RowReader File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/RowReader.vhd Line: 5
 Info (12127): Elaborating entity "MatrixDotProduct" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at MatrixDotProduct.vhd(125): signal "irow" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/MatrixDotProduct.vhd Line: 125
-Warning (10492): VHDL Process Statement warning at MatrixDotProduct.vhd(129): signal "icol" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/MatrixDotProduct.vhd Line: 129
-Warning (10631): VHDL Process Statement warning at MatrixDotProduct.vhd(116): inferring latch(es) for signal or variable "irow", which holds its previous value in one or more paths through the process File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/MatrixDotProduct.vhd Line: 116
-Warning (10631): VHDL Process Statement warning at MatrixDotProduct.vhd(116): inferring latch(es) for signal or variable "icol", which holds its previous value in one or more paths through the process File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/MatrixDotProduct.vhd Line: 116
-Info (10041): Inferred latch for "icol[0]" at MatrixDotProduct.vhd(116) File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/MatrixDotProduct.vhd Line: 116
-Info (10041): Inferred latch for "icol[1]" at MatrixDotProduct.vhd(116) File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/MatrixDotProduct.vhd Line: 116
-Info (10041): Inferred latch for "icol[2]" at MatrixDotProduct.vhd(116) File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/MatrixDotProduct.vhd Line: 116
-Info (10041): Inferred latch for "icol[3]" at MatrixDotProduct.vhd(116) File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/MatrixDotProduct.vhd Line: 116
-Info (10041): Inferred latch for "icol[4]" at MatrixDotProduct.vhd(116) File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/MatrixDotProduct.vhd Line: 116
-Info (10041): Inferred latch for "irow[0]" at MatrixDotProduct.vhd(116) File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/MatrixDotProduct.vhd Line: 116
-Info (10041): Inferred latch for "irow[1]" at MatrixDotProduct.vhd(116) File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/MatrixDotProduct.vhd Line: 116
-Info (10041): Inferred latch for "irow[2]" at MatrixDotProduct.vhd(116) File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/MatrixDotProduct.vhd Line: 116
-Info (10041): Inferred latch for "irow[3]" at MatrixDotProduct.vhd(116) File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/MatrixDotProduct.vhd Line: 116
-Info (10041): Inferred latch for "irow[4]" at MatrixDotProduct.vhd(116) File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/MatrixDotProduct.vhd Line: 116
-Info (12128): Elaborating entity "pll_altera" for hierarchy "pll_altera:pll0" File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/MatrixDotProduct.vhd Line: 95
+Warning (10036): Verilog HDL or VHDL warning at MatrixDotProduct.vhd(97): object "clk_1hz" assigned a value but never read File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/MatrixDotProduct.vhd Line: 97
+Info (12128): Elaborating entity "pll_altera" for hierarchy "pll_altera:pll0" File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/MatrixDotProduct.vhd Line: 108
 Info (12128): Elaborating entity "altpll" for hierarchy "pll_altera:pll0|altpll:altpll_component" File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/pll_altera.vhd Line: 134
 Info (12130): Elaborated megafunction instantiation "pll_altera:pll0|altpll:altpll_component" File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/pll_altera.vhd Line: 134
 Info (12133): Instantiated megafunction "pll_altera:pll0|altpll:altpll_component" with the following parameter: File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/pll_altera.vhd Line: 134
@@ -1463,7 +1449,7 @@ Info (12133): Instantiated megafunction "pll_altera:pll0|altpll:altpll_component
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altera_altpll.v
     Info (12023): Found entity 1: pll_altera_altpll File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/db/pll_altera_altpll.v Line: 30
 Info (12128): Elaborating entity "pll_altera_altpll" for hierarchy "pll_altera:pll0|altpll:altpll_component|pll_altera_altpll:auto_generated" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "matrix_dot_mul" for hierarchy "matrix_dot_mul:MdM" File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/MatrixDotProduct.vhd Line: 96
+Info (12128): Elaborating entity "matrix_dot_mul" for hierarchy "matrix_dot_mul:MdM" File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/MatrixDotProduct.vhd Line: 110
 Info (12128): Elaborating entity "MXM" for hierarchy "matrix_dot_mul:MdM|MXM:Matrix0" File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/matrix_dot_mul.vhd Line: 136
 Info (12128): Elaborating entity "ram_mxm_altera_mod" for hierarchy "matrix_dot_mul:MdM|MXM:Matrix0|ram_mxm_altera_mod:RamMatrixAltera" File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/MXM.vhd Line: 59
 Info (12128): Elaborating entity "altsyncram" for hierarchy "matrix_dot_mul:MdM|MXM:Matrix0|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component" File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/ram_mxm_altera_mod.vhd Line: 64
@@ -1540,7 +1526,7 @@ Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "matr
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "matrix_dot_mul:MdM|MXM:Matrix0|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "matrix_dot_mul:MdM|MXM:Matrix0|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 828
 Info (12128): Elaborating entity "Controller" for hierarchy "matrix_dot_mul:MdM|Controller:Ctrl" File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/matrix_dot_mul.vhd Line: 169
-Info (12128): Elaborating entity "DigitalTubeHexController" for hierarchy "DigitalTubeHexController:HexCtrl" File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/MatrixDotProduct.vhd Line: 97
+Info (12128): Elaborating entity "DigitalTubeHexController" for hierarchy "DigitalTubeHexController:HexCtrl" File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/MatrixDotProduct.vhd Line: 111
 Info (10041): Inferred latch for "dig[0]" at Vhdl1.vhd(43) File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/Vhdl1.vhd Line: 43
 Info (10041): Inferred latch for "dig[1]" at Vhdl1.vhd(43) File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/Vhdl1.vhd Line: 43
 Info (10041): Inferred latch for "dig[2]" at Vhdl1.vhd(43) File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/Vhdl1.vhd Line: 43
@@ -1552,9 +1538,10 @@ Info (10041): Inferred latch for "seg[3]" at Vhdl1.vhd(24) File: C:/Users/gabri/
 Info (10041): Inferred latch for "seg[4]" at Vhdl1.vhd(24) File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/Vhdl1.vhd Line: 24
 Info (10041): Inferred latch for "seg[5]" at Vhdl1.vhd(24) File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/Vhdl1.vhd Line: 24
 Info (10041): Inferred latch for "seg[6]" at Vhdl1.vhd(24) File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/Vhdl1.vhd Line: 24
-Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:debouncer0" File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/MatrixDotProduct.vhd Line: 98
+Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:debouncer0" File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/MatrixDotProduct.vhd Line: 113
+Info (12128): Elaborating entity "RowReader" for hierarchy "RowReader:RowReader0" File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/MatrixDotProduct.vhd Line: 115
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2020.12.17.19:24:23 Progress: Loading sld610ffc29/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2020.12.18.00:22:47 Progress: Loading sld610ffc29/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1776,21 +1763,22 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13047): Converted the fan-out from the tri-state buffer "matrix_dot_mul:MdM|MXM:Matrix2|data[31]" to the node "matrix_dot_mul:MdM|MXM:Matrix2|ram_mxm_altera_mod:RamMatrixAltera|altsyncram:altsyncram_component|altsyncram_u8t3:auto_generated|altsyncram_tqq2:altsyncram1|q_a[31]" into an OR gate File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/MXM.vhd Line: 33
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "wgrant_n" is stuck at VCC File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/MatrixDotProduct.vhd Line: 16
+    Warning (13410): Pin "beep" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Assignment/Altera_MatrixDotProduct/MatrixDotProduct.vhd Line: 21
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (17049): 16 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1147 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1117 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
     Info (21059): Implemented 18 output pins
-    Info (21061): Implemented 1014 logic cells
+    Info (21061): Implemented 984 logic cells
     Info (21064): Implemented 96 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 8 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 187 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 185 warnings
     Info: Peak virtual memory: 4842 megabytes
-    Info: Processing ended: Thu Dec 17 19:24:42 2020
-    Info: Elapsed time: 00:00:41
-    Info: Total CPU time (on all processors): 00:01:00
+    Info: Processing ended: Fri Dec 18 00:23:06 2020
+    Info: Elapsed time: 00:00:39
+    Info: Total CPU time (on all processors): 00:01:01
 
 
