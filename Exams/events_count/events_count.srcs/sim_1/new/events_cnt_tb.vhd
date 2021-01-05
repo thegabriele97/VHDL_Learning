@@ -6,19 +6,21 @@ end events_cnt_tb;
 
 architecture Behavioral of events_cnt_tb is
 
-    component events_cnt is
+    component EvtCount is
         port(
-            clk, rst, b: in std_logic;
-            c: out std_logic_vector(15 downto 0) 
+            clk, rst, B: in std_logic;
+            C: out std_logic_vector(15 downto 0) 
         );
     end component;
+    
+    for DUT: EvtCount use entity work.EvtCount(fsmd);
     
     signal clk, rst, b: std_logic := '0';
     signal c: std_logic_vector(15 downto 0);
     
 begin
 
-    DUT: events_cnt port map(clk, rst, b, c);
+    DUT: EvtCount port map(clk, rst, b, c);
 
     process
     begin

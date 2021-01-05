@@ -13,7 +13,7 @@ architecture Behavioral of fsm_tb is
         );
     end component;
 
-    for DUT: fsm use entity work.fsm(behav_2proc);
+    for DUT: fsm use entity work.fsm(proc1_same);
 
     signal clk, rst, start, stop, run: std_logic := '0';
 

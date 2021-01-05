@@ -1,0 +1,12 @@
+
+{ 
+    crc :  3180241421733436800  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto 42d75e0baffa4c18b178ad1189ea727e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot preamble_tb_behav xil_defaultlib.preamble_tb" , 
+    buildDate : "May 27 2020" , 
+    buildTime : "20:09:33" , 
+    linkCmd : "D:\\Softwares_OS\\Xilinx\\Vivado\\2020.1\\data\\..\\tps\\mingw\\6.2.0\\win64.o\\nt\\bin\\gcc.exe -Wa,-W  -O -Wl,--stack,104857600 -o \"xsim.dir/preamble_tb_behav/xsimk.exe\"   \"xsim.dir/preamble_tb_behav/obj/xsim_0.win64.obj\" \"xsim.dir/preamble_tb_behav/obj/xsim_1.win64.obj\" -L\"D:\\Softwares_OS\\Xilinx\\Vivado\\2020.1\\lib\\win64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

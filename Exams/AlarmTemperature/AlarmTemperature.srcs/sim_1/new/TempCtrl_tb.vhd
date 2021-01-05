@@ -6,22 +6,22 @@ end TempCtrl_tb;
 
 architecture Behavioral of TempCtrl_tb is
 
-    component TempCtrl is
+    component alarm is
         port(
             clk, rst: in std_logic;
-            ct, wt: in std_logic_vector(15 downto 0);
+            wt, ct: in std_logic_vector(15 downto 0);
             alarm: out std_logic
         );
     end component;
 
-    for DUT: TempCtrl use entity work.TempCtrl(fsmd);
+    --for DUT: alarm use entity work.alarm(fsmd);
 
-    signal clk, rst, alarm: std_logic := '0';
+    signal clk, rst, alarm_s: std_logic := '0';
     signal ct, wt: std_logic_vector(15 downto 0);
 
 begin
 
-    DUT: TempCtrl port map(clk, rst, ct, wt, alarm);
+    DUT: alarm port map(clk, rst, wt, ct, alarm_s);
 
     process
     begin
@@ -34,6 +34,8 @@ begin
     process
     begin
 
+        ct <= x"0001";
+
         rst <= '1';
         wait for 1 ns;
 
@@ -41,7 +43,6 @@ begin
         wait for 1 ns;
 
         wt <= x"0003";
-        ct <= x"0001";
         wait for 5 ns;
 
         ct <= x"0004";

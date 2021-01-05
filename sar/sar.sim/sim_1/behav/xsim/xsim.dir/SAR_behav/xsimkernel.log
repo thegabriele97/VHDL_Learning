@@ -1,0 +1,7 @@
+Running: xsim.dir/SAR_behav/xsimk.exe -simmode gui -wdb SAR_behav.wdb -simrunnum 0 -socket 64567
+Design successfully loaded
+Design Loading Memory Usage: 5812 KB (Peak: 5812 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 6416 KB (Peak: 6416 KB)
+Simulation CPU Usage: 31 ms

@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Exams2/BtnDebouncer/BtnDebouncer.srcs/sources_1/new/debouncer_v.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debouncer_v
+WARNING: [VRFC 10-2096] empty statement in sequential block [C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Exams2/BtnDebouncer/BtnDebouncer.srcs/sources_1/new/debouncer_v.v:17]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Exams2/BtnDebouncer/BtnDebouncer.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

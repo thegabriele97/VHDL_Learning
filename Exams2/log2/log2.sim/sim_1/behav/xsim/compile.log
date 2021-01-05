@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Exams2/log2/log2.srcs/sources_1/new/log2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'log2'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Exams2/log2/log2.srcs/sim_1/new/log2_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'log2_tb'
