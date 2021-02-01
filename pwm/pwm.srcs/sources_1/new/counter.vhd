@@ -15,6 +15,30 @@ entity counter is
     );
 end counter;
 
+architecture newarch of counter is
+
+    signal curr_cnt, next_cnt: std_logic_vector((nbits-1) downto 0);
+
+begin
+
+    val <= curr_cnt;
+    next_cnt <= std_logic_vector(unsigned(curr_cnt) + 1) when (en = '1') else curr_cnt;
+
+    process(clk, rst)
+    begin
+    
+        if (rising_edge(clk)) then
+            if (rst = '1') then
+                curr_cnt <= (others => '0');
+            else
+                curr_cnt <= next_cnt;
+            end if;
+        end if;
+    
+    end process;
+
+end newarch;
+
 architecture Behavioral of counter is
 
     signal curr_cnt, next_cnt: std_logic_vector((nbits-1) downto 0);

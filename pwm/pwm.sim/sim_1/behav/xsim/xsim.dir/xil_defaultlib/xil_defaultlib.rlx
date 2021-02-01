@@ -2,8 +2,8 @@
 2020.1
 May 27 2020
 20:09:33
-C:/Users/gabri/OneDrive/Desktop/Vivado Projects/pwm/pwm.srcs/sim_1/new/pwm_tb.vhd,1608981070,vhdl,,,,pwm_tb,,,,,,,,
-C:/Users/gabri/OneDrive/Desktop/Vivado Projects/pwm/pwm.srcs/sources_1/new/counter.vhd,1608979849,vhdl,,,,counter,,,,,,,,
-C:/Users/gabri/OneDrive/Desktop/Vivado Projects/pwm/pwm.srcs/sources_1/new/prescaler.vhd,1608980750,vhdl,,,,prescaler,,,,,,,,
-C:/Users/gabri/OneDrive/Desktop/Vivado Projects/pwm/pwm.srcs/sources_1/new/pwm.vhd,1608979355,vhdl,,,,pwm,,,,,,,,
-C:/Users/gabri/OneDrive/Desktop/Vivado Projects/pwm/pwm.srcs/sources_1/new/reg.vhd,1608978864,vhdl,,,,reg,,,,,,,,
+C:/Users/gabri/OneDrive/Desktop/Vivado Projects/pwm/pwm.srcs/sim_1/new/pwm_tb.vhd,1610617332,vhdl,,,,pwm_tb,,,,,,,,
+C:/Users/gabri/OneDrive/Desktop/Vivado Projects/pwm/pwm.srcs/sources_1/new/counter.vhd,1610617752,vhdl,C:/Users/gabri/OneDrive/Desktop/Vivado Projects/pwm/pwm.srcs/sources_1/new/prescaler.vhd;C:/Users/gabri/OneDrive/Desktop/Vivado Projects/pwm/pwm.srcs/sources_1/new/pwm.vhd,,,counter,,,,,,,,
+C:/Users/gabri/OneDrive/Desktop/Vivado Projects/pwm/pwm.srcs/sources_1/new/prescaler.vhd,1610617801,vhdl,C:/Users/gabri/OneDrive/Desktop/Vivado Projects/pwm/pwm.srcs/sources_1/new/pwm.vhd,,,prescaler,,,,,,,,
+C:/Users/gabri/OneDrive/Desktop/Vivado Projects/pwm/pwm.srcs/sources_1/new/pwm.vhd,1610617784,vhdl,C:/Users/gabri/OneDrive/Desktop/Vivado Projects/pwm/pwm.srcs/sim_1/new/pwm_tb.vhd,,,pwm,,,,,,,,
+C:/Users/gabri/OneDrive/Desktop/Vivado Projects/pwm/pwm.srcs/sources_1/new/reg.vhd,1610616957,vhdl,C:/Users/gabri/OneDrive/Desktop/Vivado Projects/pwm/pwm.srcs/sources_1/new/prescaler.vhd;C:/Users/gabri/OneDrive/Desktop/Vivado Projects/pwm/pwm.srcs/sources_1/new/pwm.vhd,,,reg,,,,,,,,

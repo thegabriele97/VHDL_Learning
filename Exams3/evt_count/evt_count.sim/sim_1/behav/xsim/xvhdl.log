@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Exams3/evt_count/evt_count.srcs/sources_1/new/evt_cnt.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'evt_cnt'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Exams3/evt_count/evt_count.srcs/sim_1/imports/new/events_cnt_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'events_cnt_tb'

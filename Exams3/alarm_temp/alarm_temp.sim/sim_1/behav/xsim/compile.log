@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Exams3/alarm_temp/alarm_temp.srcs/sources_1/new/alarm_temp.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'alarm_temp'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Exams3/alarm_temp/alarm_temp.srcs/sim_1/new/alarm_temp_Tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'alarm_temp_Tb'

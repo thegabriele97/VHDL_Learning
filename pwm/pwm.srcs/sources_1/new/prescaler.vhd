@@ -17,6 +17,56 @@ entity prescaler is
 	);
 end entity;
 
+architecture newarch of prescaler is
+
+    component counter is
+        generic(
+            nbits: integer
+        );
+        port(
+            clk, rst: in std_logic;
+            
+            en: in std_logic;
+            val: out std_logic_vector((nbits-1) downto 0)
+            
+        );
+    end component;
+
+    component reg is
+        generic(
+            nbits: integer
+        );
+        port(
+            clk, rst: in std_logic;
+            
+            nv: in std_logic_vector((nbits-1) downto 0);
+            load: in std_logic;
+            
+            done: out std_logic := '0';
+            val: out std_logic_vector((nbits-1) downto 0)
+        );
+    end component;
+
+    for all: reg use entity work.reg(newarch);
+    for all: counter use entity work.counter(newarch);
+
+    signal curr_cnt, curr_reg: std_logic_vector((nbits-1) downto 0);
+    signal irst, itc: std_logic;
+
+begin
+
+    counter0: counter generic map(nbits)
+        port map(clk, irst, '1', curr_cnt);
+
+    reg0: reg generic map(nbits)
+        port map(clk, rst, nv, load, done, curr_reg);
+
+    itc <= '1' when (curr_reg = curr_cnt) else '0';
+    irst <= rst or load or itc;
+    tc <= itc;
+    
+end newarch;
+
 architecture behav of prescaler is
 
 	type fsm_state is ( wait_nv, well_done );

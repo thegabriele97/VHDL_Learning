@@ -26,6 +26,8 @@ architecture Behavioral of pwm_tb is
         );
     end component;
 
+    for DUT: pwm use entity work.pwm(structural);
+
     signal clk, rst: std_logic := '0';
     signal divisor: std_logic_vector(31 downto 0);
     signal duty: std_logic_vector(9 downto 0);
@@ -47,6 +49,8 @@ begin
     begin
     
         rst <= '1';
+        ld_div <= '0';
+        ld_d <= '0';
         wait for 1 us;
         
         rst <= '0';
@@ -54,14 +58,21 @@ begin
         
         divisor <= x"00000001";
         ld_div <= '1';
-        wait until done_div = '1';
+        wait for 0.5 us;
         
-        ld_div <= '0';
+        ld_div <= '0' after 100 ns;
         duty <= std_logic_vector(TO_UNSIGNED(256, duty'length));
         ld_d <= '1';
-        wait until done_d = '1';
+        wait until rising_edge(done_d);
         
-        ld_d <= '0';
+        ld_d <= '0' after 100 ns;
+        wait for 500 ms;
+        
+        duty <= std_logic_vector(TO_UNSIGNED(512, duty'length));
+        ld_d <= '1';
+        wait until rising_edge(done_d);
+        
+        ld_d <= '0'; 
         wait;
     
     end process;

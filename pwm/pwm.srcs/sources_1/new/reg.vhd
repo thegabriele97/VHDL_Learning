@@ -1,5 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use ieee.numeric_std.all;
 
 entity reg is
     generic(
@@ -15,6 +16,29 @@ entity reg is
         val: out std_logic_vector((nbits-1) downto 0)
     );
 end reg;
+
+architecture newarch of reg is
+
+    signal curr_reg, next_reg: std_logic_vector((nbits-1) downto 0);
+
+begin
+
+    val <= curr_reg;
+    next_reg <= nv when (load = '1') else curr_reg;
+    done <= '0' when (next_reg /= curr_reg) else '1';
+
+    process(clk, rst)
+    begin
+
+        if (rst = '1') then
+            curr_reg <= (others => '0');
+        elsif (rising_edge(clk)) then
+            curr_reg <= next_reg;
+        end if;
+    
+    end process;
+
+end newarch;
 
 architecture Behavioral of reg is
 

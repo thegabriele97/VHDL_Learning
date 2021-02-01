@@ -11,9 +11,11 @@ Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
-Compiling architecture behav of entity xil_defaultlib.prescaler [\prescaler(nbits=32)\]
-Compiling architecture behavioral of entity xil_defaultlib.counter [\counter(nbits=10)\]
-Compiling architecture behavioral of entity xil_defaultlib.reg [\reg(nbits=10)\]
-Compiling architecture behavioral of entity xil_defaultlib.pwm [\pwm(nbits_pwm=10,nbits_divisor=...]
+Compiling architecture newarch of entity xil_defaultlib.counter [\counter(nbits=32)\]
+Compiling architecture newarch of entity xil_defaultlib.reg [\reg(nbits=32)\]
+Compiling architecture newarch of entity xil_defaultlib.prescaler [\prescaler(nbits=32)\]
+Compiling architecture newarch of entity xil_defaultlib.counter [\counter(nbits=10)\]
+Compiling architecture newarch of entity xil_defaultlib.reg [\reg(nbits=10)\]
+Compiling architecture structural of entity xil_defaultlib.pwm [pwm_default]
 Compiling architecture behavioral of entity xil_defaultlib.pwm_tb
 Built simulation snapshot pwm_tb_behav

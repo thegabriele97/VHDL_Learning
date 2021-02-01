@@ -1,5 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use ieee.numeric_std.all;
 
 entity sar_tb is
 --  Port ( );
@@ -35,6 +36,8 @@ architecture Behavioral of sar_tb is
         );
     end component;
 
+    for DUT: SAR use entity work.SAR(fsmd);
+
     signal clk, rst, soc, eoc, compin: std_logic := '0';
     signal data, dac: std_logic_vector(6 downto 0);
 
@@ -59,9 +62,17 @@ begin
         rst <= '0';
         wait for 1 ns;
         
-        compin <= '0';
         soc <= '1';
-        wait until eoc = '1';
+        for i in dac'range loop
+            
+            wait for 2 ns;
+            
+            compin <= '0';
+            if (real(TO_INTEGER(unsigned(dac))) < 119.34) then
+                compin <= '1';
+            end if;
+            
+        end loop;
         
         soc <= '0';
         wait;

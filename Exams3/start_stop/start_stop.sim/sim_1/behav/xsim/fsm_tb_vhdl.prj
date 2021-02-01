@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../start_stop.srcs/sources_1/new/fsm.vhd" \
+"../../../../start_stop.srcs/sim_1/imports/new/fsm_tb.vhd" \
+
+# Do not sort compile order
+nosort

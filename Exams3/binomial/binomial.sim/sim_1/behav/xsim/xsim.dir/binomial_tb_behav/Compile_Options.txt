@@ -1,0 +1,1 @@
+-wto "a2a39b62a6b54eb38fc982419a1c82a5" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "binomial_tb_behav" "xil_defaultlib.binomial_tb" -log "elaborate.log" 

@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Exams3/factorial/factorial.srcs/sources_1/new/factorial.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'factorial'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/gabri/OneDrive/Desktop/Vivado Projects/Exams3/factorial/factorial.srcs/sim_1/imports/new/factorial_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'factorial_tb'

@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../alarm_temp.srcs/sources_1/new/alarm_temp.vhd" \
+"../../../../alarm_temp.srcs/sim_1/new/alarm_temp_Tb.vhd" \
+
+# Do not sort compile order
+nosort

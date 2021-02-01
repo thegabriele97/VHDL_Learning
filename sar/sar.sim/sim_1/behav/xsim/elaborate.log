@@ -11,6 +11,6 @@ Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
-Compiling architecture hlsm of entity xil_defaultlib.SAR [\SAR(nbits=7,reg_siz=3)\]
+Compiling architecture fsmd of entity xil_defaultlib.SAR [\SAR(nbits=7,reg_siz=3)\]
 Compiling architecture behavioral of entity xil_defaultlib.sar_tb
 Built simulation snapshot sar_tb_behav

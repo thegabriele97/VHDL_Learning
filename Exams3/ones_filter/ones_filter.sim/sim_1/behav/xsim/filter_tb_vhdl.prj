@@ -1,0 +1,6 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../ones_filter.srcs/sim_1/imports/new/filter_tb.vhd" \
+
+# Do not sort compile order
+nosort

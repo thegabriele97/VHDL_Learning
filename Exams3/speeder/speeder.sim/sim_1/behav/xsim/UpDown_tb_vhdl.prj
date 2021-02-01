@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../speeder.srcs/sources_1/new/speeder.vhd" \
+"../../../../speeder.srcs/sim_1/imports/new/UpDown_tb.vhd" \
+
+# Do not sort compile order
+nosort
