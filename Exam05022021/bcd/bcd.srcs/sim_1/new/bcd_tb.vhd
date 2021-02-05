@@ -18,6 +18,8 @@ architecture Behavioral of bcd_tb is
 
     signal clk, rst, x: std_logic := '0';
     signal z: std_logic;
+    
+    signal storage_s: std_logic_vector(3 downto 0); 
 
 begin
 
@@ -34,7 +36,7 @@ begin
     process
         
         --variable testv: std_logic_vector(0 to 17) := "000101111011001000";
-        variable testv: std_logic_vector(0 to 17) := "000100100010101111";
+        variable testv: std_logic_vector(0 to 17) := "000110101001101011";
         variable storage: std_logic_vector(3 downto 0) := x"0";
     
     begin
@@ -48,12 +50,13 @@ begin
         wait for 0.5 ns;
         for i in testv'range loop
             x <= testv(i);
-            wait for 1 ns;
             
             storage(0) := storage(1);
             storage(1) := storage(2);
             storage(2) := storage(3);
             storage(3) := testv(i);
+            storage_s <= storage;
+            wait for 1 ns;
             
             if (unsigned(storage) > 9) then
                 assert z = '1' report "errroooooooooorrr";
