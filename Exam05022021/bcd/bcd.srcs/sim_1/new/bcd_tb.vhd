@@ -7,21 +7,21 @@ end bcd_tb;
 
 architecture Behavioral of bcd_tb is
     
-    component bcd_v is  -- change bcd_v to bcd if you want to test bcd.vhd entity
+    component bcd is  -- change bcd_v to bcd if you want to test bcd.vhd entity
         port(
             clk, rst, x: in std_logic;
             z: out std_logic
         );
     end component;
 
-    --for DUT: bcd use entity work.bcd(proc1);
+    for DUT: bcd use entity work.bcd(proc2);
 
     signal clk, rst, x: std_logic := '0';
     signal z: std_logic;
 
 begin
 
-    DUT: bcd_v port map(clk, rst, x, z); -- change bcd_v to bcd if you want to test bcd.vhd entity
+    DUT: bcd port map(clk, rst, x, z); -- change bcd_v to bcd if you want to test bcd.vhd entity
     
     process
     begin
@@ -34,7 +34,7 @@ begin
     process
         
         --variable testv: std_logic_vector(0 to 17) := "000101111011001000";
-        variable testv: std_logic_vector(0 to 17) := "000011110101001110";
+        variable testv: std_logic_vector(0 to 17) := "000100100010101111";
         variable storage: std_logic_vector(3 downto 0) := x"0";
     
     begin
