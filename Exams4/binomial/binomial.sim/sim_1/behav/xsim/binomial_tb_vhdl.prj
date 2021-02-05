@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../binomial.srcs/sources_1/new/binomial.vhd" \
+"../../../../binomial.srcs/sim_1/imports/new/binomial_tb.vhd" \
+
+# Do not sort compile order
+nosort
